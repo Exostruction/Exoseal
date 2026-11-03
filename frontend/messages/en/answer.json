@@ -1,0 +1,22 @@
+{
+  "titleNamed": "{owner} is asking you for some information",
+  "titleAnon": "Someone is asking you for some information",
+  "textLabel": "Your reply",
+  "textHint": "It is encrypted in your browser before it is sent. Only the person who sent the request can read it. Maximum {max} characters/bytes.",
+  "validUntil": "You can reply until {date}.",
+  "submit": "Send encrypted",
+  "sending": "Encrypting and sending …",
+  "loading": "Loading …",
+  "errors": {
+    "gone": "This request was already answered or has expired.",
+    "missingKey": "The link is incomplete (the part after the # is missing). Please use the whole link.",
+    "mismatch": "This link does not match the key of the request. Do not enter anything here and ask the sender for a new link.",
+    "empty": "Please enter some text.",
+    "tooLarge": "The text is too large.",
+    "rateLimited": "Too many requests. Please try again later.",
+    "generic": "That didn't work. Please try again."
+  },
+  "doneTitle": "Reply sent",
+  "doneText": "Your reply was encrypted in your browser and transmitted. Only the sender can read it, not even the server.",
+  "doneHint": "You can close this page now."
+}

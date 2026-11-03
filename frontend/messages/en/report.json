@@ -1,0 +1,17 @@
+{
+  "title": "Report link",
+  "text": "If this link is being abused or you did not expect it, you can report it here. The secret is deleted without anyone reading it.",
+  "submit": "Report and delete",
+  "submitting": "Deleting …",
+  "done": "Done. The secret has been deleted.",
+  "contact": "For further information, please contact {email}.",
+  "errors": {
+    "rateLimited": "Too many requests. Please try again later.",
+    "generic": "That didn't work. Please try again.",
+    "gone": "This link does not exist (any more). There is nothing to report.",
+    "goneOpened": "This link has already been opened and the secret is deleted. There is nothing left to report. If you did not open it yourself, tell the sender.",
+    "goneExpired": "This link has expired and the secret was deleted. There is nothing to report.",
+    "goneReported": "This link has already been reported and the secret was deleted.",
+    "goneRevoked": "The sender withdrew this link and the secret was deleted. There is nothing to report."
+  }
+}

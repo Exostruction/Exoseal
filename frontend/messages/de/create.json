@@ -1,0 +1,31 @@
+{
+  "title": "Geheimnis senden",
+  "intro": "Der Text wird in deinem Browser verschlüsselt. Der Server sieht ihn nie, und der Link funktioniert genau einmal.",
+  "textLabel": "Geheimnis",
+  "textHint": "Maximal {max} Zeichen/Bytes.",
+  "expiryLabel": "Gültig für",
+  "expiry": {
+    "1h": "1 Stunde",
+    "1d": "1 Tag",
+    "7d": "7 Tage"
+  },
+  "passwordLabel": "Zusätzliches Passwort (optional)",
+  "passwordHint": "Gib das Passwort dem Empfänger auf einem anderen Weg.",
+  "submit": "Link erstellen",
+  "submitting": "Wird verschlüsselt …",
+  "linkTitle": "Dein Link",
+  "linkHint": "Schick den Link dem Empfänger. Er funktioniert nur einmal. Der Schlüssel steht hinter dem #, den sieht der Server nie.",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "another": "Weiteres Geheimnis",
+  "errors": {
+    "empty": "Bitte einen Text eingeben.",
+    "tooLarge": "Der Text ist zu groß.",
+    "unauthorized": "Deine Sitzung ist abgelaufen. Bitte neu anmelden.",
+    "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+    "generic": "Das hat nicht geklappt. Bitte erneut versuchen.",
+    "quota": "Du hast die Höchstzahl aktiver Links erreicht (500). Ziehe alte Links unter „Gesendet“ zurück oder warte, bis sie ablaufen."
+  },
+  "labelLabel": "Bezeichnung (optional)",
+  "labelHint": "Nur für deine Liste unter \"Gesendet\". Wird nicht verschlüsselt, bitte nichts Geheimes eintragen."
+}

@@ -1,0 +1,229 @@
+{
+  "index": {
+    "metaTitle": "Guides | ExoSeal",
+    "metaDescription": "Step-by-step guides for ExoSeal: share secrets securely, request secrets and self-host ExoSeal.",
+    "eyebrow": "Guides",
+    "title": "Guides",
+    "intro": "Explained step by step: share, request and run it yourself.",
+    "read": "Read the guide",
+    "heading": "Step by step to sharing safely.",
+    "steps": "{n} steps",
+    "search": "Search guides …",
+    "all": "All",
+    "empty": "No guide found. Try a different search term."
+  },
+  "common": {
+    "home": "Home",
+    "guides": "Guides",
+    "step": "Step {n}",
+    "tips": "Good to know",
+    "related": "More guides",
+    "ctaSend": "Sign in and send a secret",
+    "ctaRequest": "Sign in and request a secret",
+    "ctaFaq": "FAQ",
+    "eyebrow": "Guide",
+    "back": "Back to overview",
+    "meta": "ExoSeal · {n} steps",
+    "toc": "Contents",
+    "sideEyebrow": "Ready?",
+    "sideTitle": "Your first link.",
+    "sideText": "Sign in and share your first secret in a few seconds.",
+    "faqTitle": "Common questions.",
+    "readMore": "Keep reading",
+    "allGuides": "View all guides",
+    "authorEyebrow": "Built by",
+    "authorRole": "Maker of ExoSeal",
+    "authorText": "ExoSeal is built by Exostruction, a small software company from Bavaria. The source code is open (AGPL-3.0).",
+    "note": "This guide describes the default settings of ExoSeal. On self-hosted instances individual values may differ.",
+    "readTime": "{n} min read",
+    "factA": "Encrypted end to end in the browser",
+    "factB": "The link works exactly once",
+    "factC": "Open source under AGPL-3.0",
+    "sideFaq": "More in the FAQ"
+  },
+  "items": {
+    "send-secret": {
+      "title": "Share a secret securely",
+      "metaTitle": "How to share a password securely: one-time link guide | ExoSeal",
+      "description": "How to share a password or key as a one-time link: enter it, pick a lifetime, optionally set a password, send the link. End-to-end encrypted.",
+      "intro": "You send a password, a key or an access code as a link that works exactly once. Encryption happens in your browser, the server only sees ciphertext.",
+      "cta": "ctaSend",
+      "steps": {
+        "s1": {
+          "title": "Sign in",
+          "text": "Open ExoSeal and sign in. Only the person sending a secret needs an account. Whoever opens it later does not."
+        },
+        "s2": {
+          "title": "Enter the secret",
+          "text": "Paste the password, key or text into “Send a secret”. Up to 50,000 characters fit. You can add a label for your “Sent” list. It is not encrypted, so do not enter anything secret."
+        },
+        "s3": {
+          "title": "Pick a lifetime",
+          "text": "Choose how long the link stays valid: one hour, one day or seven days. After that the secret is deleted, even if nobody opened it."
+        },
+        "s4": {
+          "title": "Optionally add a password",
+          "text": "With an extra password the link alone is worthless. Give the password to the recipient another way, for example by phone."
+        },
+        "s5": {
+          "title": "Create the link and send it",
+          "text": "After “Create link” your browser encrypts the secret and shows the link. The key sits in the part after the #, which your browser never sends to a server. Send the whole link."
+        },
+        "s6": {
+          "title": "The recipient opens the link",
+          "text": "The recipient clicks “Show secret” and sees the content. Right after that it is deleted and the link stops working."
+        }
+      },
+      "tips": {
+        "t1": "Send the whole link, including the part after the #. Without it the secret cannot be decrypted.",
+        "t2": "If someone else opened the link first, the secret is gone for the recipient. Treat it as compromised, change it and send a new one.",
+        "t3": "A recipient can have a suspicious link deleted via “Report this link” without reading the content.",
+        "t4": "Under “Sent” you see whether a link was opened, expired or reported. You can withdraw open links there."
+      },
+      "tag": "Sharing",
+      "faq": {
+        "q1": {
+          "q": "Can I withdraw a link afterwards?",
+          "a": "Yes, as long as it has not been opened. Under \"Sent\" you withdraw the link, the secret is deleted and the link says \"withdrawn\". A link also expires after the first view or after the chosen lifetime. Reported links are deleted immediately."
+        },
+        "q2": {
+          "q": "What happens if the recipient never opens the link?",
+          "a": "When the chosen lifetime ends, the secret is deleted automatically, even if nobody opened it."
+        },
+        "q3": {
+          "q": "Is the extra password required?",
+          "a": "No, it is optional. It adds protection if the link ends up in the wrong hands. Give the password to the recipient through a different channel."
+        },
+        "q4": {
+          "q": "How much fits into a secret?",
+          "a": "Up to 50,000 characters. That is enough for passwords, keys, access codes and short texts."
+        }
+      },
+      "updated": "2026-11-02"
+    },
+    "request-secret": {
+      "title": "Request a secret",
+      "metaTitle": "Collect credentials from customers: request link guide | ExoSeal",
+      "description": "How to ask customers or colleagues for a secret: create a request, send the link, receive the answer encrypted in the browser and open it with your passphrase.",
+      "intro": "Need a password or key from someone else? Send a request link. They answer in their browser, without an account, and only you can open the answer.",
+      "cta": "ctaRequest",
+      "steps": {
+        "s1": {
+          "title": "Open a new request",
+          "text": "Sign in and choose “New request”."
+        },
+        "s2": {
+          "title": "Write the question",
+          "text": "Under “What do you need?” write what you expect, for example “Credentials for the staging server”. The other person sees this in plain text, so do not put anything secret here."
+        },
+        "s3": {
+          "title": "Pick a time frame",
+          "text": "Decide how long the person can answer: 1, 3, 7, 14 or 30 days."
+        },
+        "s4": {
+          "title": "Set a passphrase",
+          "text": "The passphrase protects your private key. It has at least 10 characters, ideally a long sentence. There is no recovery: without the passphrase the answer is lost."
+        },
+        "s5": {
+          "title": "Send the link",
+          "text": "Send the link to the other person. It is shown only now. The part after the # makes sure the answer is encrypted for you, and it stays in the browser."
+        },
+        "s6": {
+          "title": "The person answers",
+          "text": "They open the link, see your question and answer. The answer is encrypted in their browser and can be sent only once. No account needed."
+        },
+        "s7": {
+          "title": "Open the answer",
+          "text": "Under “Requests” you see the status. Open the request and enter your passphrase to decrypt the answer. It can be opened only once."
+        }
+      },
+      "tips": {
+        "t1": "With mail or a webhook set up you learn that an answer arrived. The content is never in the message.",
+        "t2": "Entering a wrong passphrase does not cost you the answer. You can try again.",
+        "t3": "You can delete requests at any time under “Requests”."
+      },
+      "tag": "Requests",
+      "faq": {
+        "q1": {
+          "q": "Does my customer need an account?",
+          "a": "No. They open the request link and answer directly in the browser."
+        },
+        "q2": {
+          "q": "What happens if I forget my passphrase?",
+          "a": "Then the reply is lost. There is no recovery, because only you can decrypt it with your passphrase."
+        },
+        "q3": {
+          "q": "How long are replies stored?",
+          "a": "A reply is deleted when it is opened or after 7 days. The request itself stays until you delete it or 30 days after it ends."
+        },
+        "q4": {
+          "q": "Can the server read the reply?",
+          "a": "No. It is encrypted in your customer's browser and the server only stores ciphertext."
+        }
+      },
+      "updated": "2026-11-02"
+    },
+    "self-hosting": {
+      "title": "Self-host ExoSeal",
+      "metaTitle": "Self-host ExoSeal: Docker guide | ExoSeal",
+      "description": "ExoSeal is open source (AGPL-3.0) and runs with Docker Compose on your own server. How to set up domain, sign-in, reverse proxy and notifications.",
+      "intro": "ExoSeal runs with one docker-compose file on your own server and with your own login provider. Then everything is yours.",
+      "cta": "ctaFaq",
+      "steps": {
+        "s1": {
+          "title": "Requirements",
+          "text": "You need a server with Docker and Docker Compose, a domain with HTTPS through a reverse proxy such as Caddy or nginx, and an OIDC sign-in provider with PKCE (S256)."
+        },
+        "s2": {
+          "title": "Create the configuration",
+          "text": "Download docker-compose.yml and .env.example from the repository into an empty folder and copy .env.example to .env. Set your own database password and PUBLIC_URL to your address, for example https://seal.example.com. The .env file never belongs in a repository."
+        },
+        "s3": {
+          "title": "Set up sign-in",
+          "text": "Enter OIDC_METADATA_ADDRESS, OIDC_CLIENT_ID and OIDC_CLIENT_SECRET of your provider. At the provider, register the redirect URI PUBLIC_URL/api/v1/auth/callback."
+        },
+        "s4": {
+          "title": "Who may send",
+          "text": "Set ALLOWED_EMAIL_DOMAINS and/or ALLOWED_EMAILS. Only these addresses can create links. Once sign-in is active, at least one entry is required."
+        },
+        "s5": {
+          "title": "Put a reverse proxy in front",
+          "text": "The proxy forwards to the frontend (port 3000) and handles TLS. Set TRUSTED_PROXY_HOPS to 1 if exactly one proxy sits in front, so the per-visitor limit counts correctly. If the real IP arrives in a header of its own instead (Cloudflare: CF-Connecting-IP), set CLIENT_IP_HEADER to its name, but only if the server can be reached solely through that proxy."
+        },
+        "s6": {
+          "title": "Start",
+          "text": "Start everything with docker compose pull, then docker compose up -d. The ready-made images come from the GitHub Container Registry, nothing is built. The frontend health check reports when everything runs. Then open your address and sign in."
+        },
+        "s7": {
+          "title": "Optional: notifications, imprint, reports",
+          "text": "With SMTP_* or WEBHOOK_URL you get notified when a request was answered. The IMPRINT_* settings (name, address, email, representatives, phone, register, VAT ID) fill the imprint and the terms of use, PRIVACY_SERVICES names services in front of the instance such as Cloudflare in the privacy policy, ABUSE_EMAIL shows a contact address for abuse reports."
+        }
+      },
+      "tips": {
+        "t1": "Back up the database without the secrets table. Secrets are ephemeral, a backup would bring back ones that were already opened.",
+        "t2": "Do not enable access logs that contain paths: the address holds the ID of the secret.",
+        "t3": "The detailed operating notes are in the docs folder of the project."
+      },
+      "tag": "Operation",
+      "faq": {
+        "q1": {
+          "q": "Do I need my own login provider?",
+          "a": "Yes. ExoSeal signs users in through an OpenID Connect provider. You decide which email addresses or domains may sign in with an allowlist."
+        },
+        "q2": {
+          "q": "Which license applies?",
+          "a": "ExoSeal is licensed under AGPL-3.0. You may run and modify it yourself. Changes to a publicly operated instance must be published as well."
+        },
+        "q3": {
+          "q": "What should I watch for with the reverse proxy?",
+          "a": "The number of proxies in front of ExoSeal must match the TRUSTED_PROXY_HOPS setting. Otherwise all visitors share the same abuse limit."
+        },
+        "q4": {
+          "q": "Do I need a mail server?",
+          "a": "No. Notifications by mail or webhook are optional."
+        }
+      },
+      "updated": "2026-11-03"
+    }
+  }
+}

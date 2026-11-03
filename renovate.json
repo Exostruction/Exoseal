@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 6am on monday"],
+  "minimumReleaseAge": "14 days",
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "description": "Nur LTS-Versionen (gerade Hauptversionen) für Node und .NET",
+      "matchPackageNames": ["node", "mcr.microsoft.com/dotnet/sdk", "mcr.microsoft.com/dotnet/aspnet"],
+      "allowedVersions": "/^\\d*[02468]($|[.-])/"
+    },
+    {
+      "description": "Kleine Updates gebündelt, Hauptversionen einzeln zur Prüfung",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "groupName": "non-major"
+    }
+  ]
+}

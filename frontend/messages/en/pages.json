@@ -1,0 +1,274 @@
+{
+  "security": {
+    "metaTitle": "Security: what ExoSeal does and does not protect | ExoSeal",
+    "metaDescription": "ExoSeal's public threat model: what end-to-end encryption protects against, what it does not, and how to verify every claim yourself.",
+    "eyebrow": "Security",
+    "title": "What is protected and what is not.",
+    "intro": "A security tool that only lists strengths is not credible. This is the full threat model: what ExoSeal protects against, where it ends and how you check everything yourself.",
+    "yesWord": "protects",
+    "noWord": "does not protect",
+    "yes": {
+      "a": {
+        "name": "Database or backup leaks",
+        "text": "Only ciphertext is stored. Secrets are single-use and short-lived."
+      },
+      "b": {
+        "name": "Curious operators",
+        "text": "Whoever reads the database or logs finds no key, no plaintext and no IP addresses."
+      },
+      "c": {
+        "name": "Link preview bots",
+        "text": "Slack, Teams or Outlook only fetch links. Opening needs a click on a button, so a bot consumes nothing."
+      },
+      "d": {
+        "name": "Mistyped passwords",
+        "text": "The passphrase is checked in the browser before the reply is fetched and deleted."
+      },
+      "e": {
+        "name": "Swapped public keys",
+        "text": "The customer link carries a fingerprint of the key. If it does not match, the browser stops."
+      },
+      "f": {
+        "name": "Parallel opening",
+        "text": "Opening and answering are single database statements. With 30 to 40 parallel attempts exactly one wins."
+      },
+      "g": {
+        "name": "Script injection",
+        "text": "Strict Content-Security-Policy with a nonce per request and no external sources."
+      },
+      "h": {
+        "name": "Foreign pages and other subdomains",
+        "text": "The server accepts writing calls only from its own origin (Sec-Fetch-Site, Origin). A foreign or hacked page under the same main domain cannot create or delete anything in your name."
+      },
+      "i": {
+        "name": "Overload and a full database",
+        "text": "Rate limits count signed-in users one by one and everyone else by IP. Every user has a quota (500 running links, 200 running requests), so a hijacked account cannot fill the database."
+      }
+    },
+    "no": {
+      "a": {
+        "name": "A tampered server",
+        "text": "The encrypting code comes from the server. Whoever takes over the server can ship modified code. That is why ExoSeal is open source and self-hostable. For very high stakes use a native tool such as age or GPG."
+      },
+      "b": {
+        "name": "A short passphrase",
+        "text": "For requests the wrapped private key is stored encrypted on the server. 600,000 iterations slow guessing down, but a short passphrase will still fall. Use a long sentence."
+      },
+      "c": {
+        "name": "A forgotten passphrase",
+        "text": "There is no recovery. The reply is gone."
+      },
+      "d": {
+        "name": "A compromised device",
+        "text": "Malware, shoulder surfing or clipboard managers on either side."
+      },
+      "e": {
+        "name": "Metadata",
+        "text": "The server knows that a request exists, when it was created, answered and opened, and who owns it, and which user created a link and when. It does not know the recipient or the content. The reverse proxy sees IP addresses unless you turn logging off."
+      },
+      "f": {
+        "name": "The full link in the wrong hands",
+        "text": "Whoever opens the complete link before the recipient wins. If the recipient finds the link used up, something is wrong."
+      },
+      "g": {
+        "name": "A stolen session",
+        "text": "The session lasts a fixed 8 hours. \"Sign out\" deletes the cookie in the browser; the server cannot end a stolen session early. The cookie is HttpOnly and the strict CSP stops scripts from reading it."
+      }
+    },
+    "verifyTitle": "How to check it yourself.",
+    "verifyIntro": "You do not have to take our word for it. Three ways to verify every claim.",
+    "verify": {
+      "a": {
+        "name": "Read the source",
+        "text": "Encryption lives in the frontend, storage rules in the backend. Both are open under AGPL-3.0 and short enough to read in an afternoon."
+      },
+      "b": {
+        "name": "Look in the browser",
+        "text": "Open the developer tools, Network tab. When you open a link, nothing after the # ever goes to the server. The browser decides that, not us."
+      },
+      "c": {
+        "name": "Run it yourself",
+        "text": "With a compose file and your own login provider, ExoSeal runs on your server. Then trust depends only on you."
+      }
+    },
+    "ctaTitle": "Another question about security?",
+    "ctaText": "The most common questions are answered, and the guides show every step.",
+    "ctaFaq": "To the questions",
+    "ctaHost": "Self-host"
+  },
+  "compare": {
+    "metaTitle": "Comparison: ExoSeal, email, chat, password managers | ExoSeal",
+    "metaDescription": "An honest comparison: passwords by email or chat, password managers, age or GPG, and ExoSeal. Where ExoSeal is better and where it is not.",
+    "eyebrow": "Comparison",
+    "title": "How ExoSeal compares.",
+    "intro": "No tool fits everywhere. Here you see where ExoSeal is stronger, where another tool fits better and why.",
+    "cols": {
+      "mail": "Email or chat",
+      "pm": "Password manager",
+      "native": "age or GPG",
+      "exo": "ExoSeal"
+    },
+    "rows": {
+      "a": {
+        "name": "Stays after reading?",
+        "mail": "Yes, often forever",
+        "pm": "Depends on settings",
+        "native": "Yes, the file remains",
+        "exo": "No, deleted on first view"
+      },
+      "b": {
+        "name": "Recipient needs",
+        "mail": "Nothing",
+        "pm": "Usually an account",
+        "native": "Software and key",
+        "exo": "Only a browser"
+      },
+      "c": {
+        "name": "Can the provider read it?",
+        "mail": "Yes",
+        "pm": "Not with a good provider",
+        "native": "No",
+        "exo": "No, except with tampered code"
+      },
+      "d": {
+        "name": "Effort",
+        "mail": "None",
+        "pm": "Account and setup",
+        "native": "High",
+        "exo": "Low"
+      },
+      "e": {
+        "name": "Self-hostable",
+        "mail": "No",
+        "pm": "Partly",
+        "native": "Runs locally",
+        "exo": "Yes, open source (AGPL-3.0)"
+      }
+    },
+    "betterTitle": "When something else fits better.",
+    "betterIntro": "We tell you honestly when you should not use ExoSeal.",
+    "better": {
+      "a": {
+        "name": "Highest stakes",
+        "text": "Against a tampered server only a native tool such as age or GPG helps, because no code comes from a server there."
+      },
+      "b": {
+        "name": "Lasting team access",
+        "text": "If several people need a password for a long time, it belongs in a password manager. ExoSeal is for handing something over once."
+      },
+      "c": {
+        "name": "Large files",
+        "text": "ExoSeal is meant for text up to 50,000 characters, not for files."
+      }
+    },
+    "ctaTitle": "Does ExoSeal fit you?",
+    "ctaText": "Read the threat model and the guides, then decide.",
+    "ctaSecurity": "To security",
+    "ctaGuides": "To the guides"
+  },
+  "openSource": {
+    "metaTitle": "Open source: self-host ExoSeal under AGPL-3.0 | ExoSeal",
+    "metaDescription": "ExoSeal is open source under AGPL-3.0. View the source, run it yourself with Docker and contribute.",
+    "eyebrow": "Open source",
+    "title": "Open, so you do not have to believe.",
+    "intro": "All of ExoSeal's code is freely readable. Anyone who uses a tool for secrets should be able to check what it does, and to run it themselves.",
+    "licenseTitle": "The license.",
+    "licenseIntro": "ExoSeal is licensed under the GNU Affero General Public License 3.0 (AGPL-3.0).",
+    "license": {
+      "a": {
+        "name": "Use and operate",
+        "text": "You may use ExoSeal freely, also commercially, on your own server."
+      },
+      "b": {
+        "name": "Modify",
+        "text": "You may adapt and extend the code."
+      },
+      "c": {
+        "name": "Stay open",
+        "text": "Whoever offers a modified version as a network service must publish the changes too."
+      }
+    },
+    "hostTitle": "Self-hosting.",
+    "hostText": "One compose file, an OpenID Connect login provider and a reverse proxy are enough. Backend, database and cache run in Docker, and the backend is not reachable from the internet.",
+    "stackTitle": "What it is made of.",
+    "stack": {
+      "a": {
+        "name": "Frontend",
+        "text": "Next.js and React, encryption in the browser with Web Crypto."
+      },
+      "b": {
+        "name": "Backend",
+        "text": "C# on .NET 10, only the backend talks to the database."
+      },
+      "c": {
+        "name": "Data",
+        "text": "PostgreSQL for secrets and requests, Valkey for short-lived counters."
+      }
+    },
+    "joinTitle": "Get involved.",
+    "joinText": "Bugs, ideas and improvements are welcome. The contribution guide and the public repository arrive with the first release. Until then the changelog shows the current state.",
+    "ctaCode": "View the source",
+    "ctaHost": "Self-host",
+    "ctaLog": "Changelog"
+  },
+  "changelog": {
+    "metaTitle": "Changelog: what changed in ExoSeal | ExoSeal",
+    "metaDescription": "ExoSeal's changelog: development milestones, plus a public feed you can subscribe to.",
+    "eyebrow": "Changelog",
+    "title": "What changed in ExoSeal.",
+    "intro": "Numbers up to 1.0 are development stages, there is no tagged release yet. These are the milestones, newest first. A public feed lets you subscribe.",
+    "feed": "Subscribe to the feed",
+    "json": "As JSON",
+    "items": {
+      "e8": {
+        "date": "2026-11-03",
+        "version": "0.8.0",
+        "title": "Security and a clearer app",
+        "text": "Rate limits now count per user instead of for everyone together, every user has a quota, and writing calls are only accepted from the site's own origin. The app separates sending and requests into two groups, lists can be refreshed, messages and copy rows look the same everywhere, and the success page after a reply explains what happened. Reporting an already opened link now tells you the real state."
+      },
+      "e7": {
+        "date": "2026-11-02",
+        "title": "Sent list and withdrawing links",
+        "text": "Under \"Sent\" you see whether a link was opened, expired or reported, and you can withdraw open links. A link tells the recipient why it no longer works. Also new: service provider details in the privacy policy, terms of use and an imprint with all mandatory details.",
+        "version": "0.7.0"
+      },
+      "e6": {
+        "date": "2026-11-02",
+        "title": "New pages and polish",
+        "text": "Dedicated pages for security, comparison, open source and this changelog. Guides with search and questions, a reworked FAQ, footer and error pages, a new logo.",
+        "version": "0.6.0"
+      },
+      "e5": {
+        "date": "2026-11-01",
+        "title": "New design and home page",
+        "text": "Home page with an explainer animation, separate areas for site, app and recipient, a dedicated sign-in page, light and dark mode.",
+        "version": "0.5.0"
+      },
+      "e4": {
+        "date": "2026-10-31",
+        "title": "Request link",
+        "text": "Request secrets: the key pair is created in the browser and the reply stays end-to-end encrypted. Notification by email or webhook.",
+        "version": "0.4.0"
+      },
+      "e3": {
+        "date": "2026-10-31",
+        "title": "Hardening",
+        "text": "Strict Content-Security-Policy with a nonce, security headers, report function, custom error pages and operations documentation.",
+        "version": "0.3.0"
+      },
+      "e2": {
+        "date": "2026-10-31",
+        "title": "Send secrets",
+        "text": "Encryption in the browser, single retrieval, expiry, optional second password and abuse limiting.",
+        "version": "0.2.0"
+      },
+      "e1": {
+        "date": "2026-10-31",
+        "title": "Project start",
+        "text": "Foundation with backend, frontend and Docker, sign-in with OpenID Connect and an allowlist, German and English.",
+        "version": "0.1.0"
+      }
+    },
+    "current": "Current version"
+  }
+}

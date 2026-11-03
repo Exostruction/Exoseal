@@ -1,0 +1,114 @@
+{
+  "imprintLink": "Imprint",
+  "privacyLink": "Privacy",
+  "imprint": {
+    "title": "Imprint",
+    "name": "Provider",
+    "address": "Address",
+    "email": "Contact",
+    "unset": "The operator of this instance has not published imprint details yet.",
+    "metaDescription": "Legal notice and provider information for ExoSeal: operator details and contact options as required by German law.",
+    "eyebrow": "Legal",
+    "heading": "Legal notice",
+    "intro": "Details about the operator of this instance.",
+    "updated": "2 November 2026",
+    "updatedLabel": "Updated",
+    "provider": "Provider",
+    "contact": "Contact",
+    "representedBy": "Represented by",
+    "register": "Commercial register",
+    "vatId": "VAT ID"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "We take the protection of your data seriously. This page lists which data we process, when and why.",
+    "s1": {
+      "title": "Visitors and recipients",
+      "text": "Opening a link or answering a request needs no account and sets no cookies. No tracking, no analytics, no external resources. If you switch the color theme, your choice is stored only locally in your browser (localStorage) and never sent to the server. Our application stores and logs no IP addresses. If the operator uses protective services in front of it, they are listed under \"Service providers\". For rate limiting only a keyed hash of the IP address lives in memory for about a minute."
+    },
+    "s2": {
+      "title": "Signed-in users",
+      "text": "Sign-in goes through the operator's identity provider. For requests the server stores your provider ID, email address and name (to show the recipient your name and to notify you). For sent links it stores your provider ID, an optional label, creation and expiry time and the status, so you see them under \"Sent\" and can withdraw them. It never knows the recipient or the content. A session cookie, needed for up to 8 hours, keeps you signed in."
+    },
+    "s3": {
+      "title": "Secrets and replies",
+      "text": "They are encrypted in your browser before upload. The server stores only ciphertext and cannot read it. Secrets are deleted on first view, on expiry or when reported. Afterwards only a note remains for 30 days (random ID, reason, times, your provider ID and the label), so a link can show whether it was opened, expired, reported or withdrawn and you keep the entry in your list. The note contains no content, no recipient and no IP address. Replies to requests are deleted when opened or after 7 days."
+    },
+    "s4": {
+      "title": "Requests",
+      "text": "The question, owner name and email, public key, passphrase-protected private key and timestamps are stored until the request is deleted or 30 days after it ends."
+    },
+    "s5": {
+      "title": "Notifications",
+      "text": "If enabled, an email or webhook tells the owner that a reply arrived. It never contains the content."
+    },
+    "toc": "On this page",
+    "eyebrow": "Legal",
+    "heading": "Privacy policy",
+    "updated": "2 November 2026",
+    "updatedLabel": "Updated",
+    "services": {
+      "title": "Service providers",
+      "intro": "This instance uses the following service providers. They never see the content of secrets: it is encrypted in the browser, and no browser sends the key behind the # to a server.",
+      "cloudflare": {
+        "title": "Cloudflare (delivery and protection)",
+        "text": "The instance is delivered through Cloudflare (Cloudflare, Inc., USA) as an intermediary and as protection against attacks. Cloudflare technically processes the IP address and request data of every visitor, also when a link is opened, and may set a strictly necessary cookie. The legal basis is our legitimate interest in secure and fast operation (Art. 6(1)(f) GDPR). The transfer to the USA relies on the EU-US Data Privacy Framework and standard contractual clauses; a data processing agreement exists with Cloudflare."
+      },
+      "crowdsec": {
+        "title": "CrowdSec (protection against attacks)",
+        "text": "To protect against attacks the operator checks requests with CrowdSec (CrowdSec SAS, France). The IP address is processed to detect malicious patterns and block attackers. The legal basis is our legitimate interest in the security of the service (Art. 6(1)(f) GDPR). The data is not shared with the CrowdSec community."
+      },
+      "crowdsecshare": {
+        "title": "CrowdSec (protection against attacks, with community)",
+        "text": "To protect against attacks the operator checks requests with CrowdSec (CrowdSec SAS, France). The IP address is processed to detect malicious patterns and block attackers. Detected attacks (the attacker's IP address, type of attack, time) are reported to the CrowdSec community; the IP addresses of normal visitors are not shared. The legal basis is our legitimate interest in the security of the service (Art. 6(1)(f) GDPR)."
+      }
+    }
+  },
+  "termsLink": "Terms of use",
+  "terms": {
+    "heading": "Terms of use",
+    "eyebrow": "Legal",
+    "intro": "The rules for using this ExoSeal instance.",
+    "toc": "Sections",
+    "updated": "2 November 2026",
+    "updatedLabel": "Updated",
+    "metaDescription": "Terms of use of this ExoSeal instance: service, acceptable use, access, reporting and removal, liability.",
+    "operatorFallback": "the operator of this instance",
+    "scope": {
+      "title": "Scope",
+      "text": "These terms apply to the use of this ExoSeal instance provided by {operator} (the operator). Creating links requires signing in. Opening a link or answering a request needs no account and is also subject to these terms."
+    },
+    "service": {
+      "title": "Service",
+      "text": "The service transmits secrets and replies end-to-end encrypted. The operator stores only encrypted data and cannot read it. Secrets are deleted on first view, on expiry or after a report. There is no claim that a secret is retrievable at a given time or at all."
+    },
+    "use": {
+      "title": "Acceptable use",
+      "text": "The service may only be used lawfully. In particular it is forbidden to transmit unlawful content, malware, insults, threats or spam, to bypass protective measures and to create links in bulk by automated means. Users are responsible for the content they transmit."
+    },
+    "access": {
+      "title": "Access and account",
+      "text": "Creating links is only possible after signing in through the identity provider chosen by the operator. The operator may block access if these terms are violated or abuse is to be feared."
+    },
+    "report": {
+      "title": "Reporting and removal",
+      "text": "Any recipient can have a link deleted with the \"Report this link\" function without reading its content. Because the operator cannot read content, removal happens through this function. Notices of abuse can be sent to the address in the legal notice."
+    },
+    "availability": {
+      "title": "Availability",
+      "text": "The service is provided without any guarantee of availability. Maintenance, faults and changes can cause interruptions."
+    },
+    "liability": {
+      "title": "Liability",
+      "text": "The operator is liable without limit for intent, gross negligence and injury to life, body or health. For slight negligence it is only liable for breach of essential contractual duties and limited to the foreseeable damage typical for the contract. The operator is not liable for the consequences of a lost key, a forgotten passphrase or a shared link."
+    },
+    "changes": {
+      "title": "Changes",
+      "text": "The operator may change these terms with effect for the future. The current version is on this page."
+    },
+    "law": {
+      "title": "Governing law",
+      "text": "German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. Mandatory consumer protection rules remain unaffected."
+    }
+  }
+}

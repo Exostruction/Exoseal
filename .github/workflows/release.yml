@@ -1,0 +1,63 @@
+name: release
+# Ein Tag v1.2.3 baut beide Images, prüft sie und legt sie als 1.2.3, 1.2 und latest in die GitHub Container Registry.
+on:
+  push:
+    tags: ["v*.*.*"]
+permissions:
+  contents: write
+  packages: write
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - { name: exoseal-backend, context: backend }
+          - { name: exoseal-frontend, context: frontend }
+    env:
+      IMAGE: ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Tag muss zur Version im Projekt passen
+        run: |
+          v=$(node -p "require('./frontend/package.json').version")
+          [ "v$v" = "${GITHUB_REF_NAME}" ] || { echo "Tag ${GITHUB_REF_NAME} passt nicht zu package.json ($v)"; exit 1; }
+      - uses: docker/setup-qemu-action@v4
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest
+          labels: |
+            org.opencontainers.image.licenses=AGPL-3.0-only
+      # Erst bauen und prüfen, dann veröffentlichen: ein Fund mit Korrektur (HIGH/CRITICAL) stoppt die Veröffentlichung.
+      - uses: docker/build-push-action@v7
+        with:
+          context: ${{ matrix.context }}
+          load: true
+          tags: scan:local
+          cache-from: type=gha,scope=${{ matrix.name }}
+      - uses: aquasecurity/trivy-action@0.36.0
+        with:
+          image-ref: scan:local
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: "1"
+      - uses: docker/build-push-action@v7
+        with:
+          context: ${{ matrix.context }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.name }}

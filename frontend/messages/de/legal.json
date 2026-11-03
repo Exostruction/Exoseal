@@ -1,0 +1,114 @@
+{
+  "imprintLink": "Impressum",
+  "privacyLink": "Datenschutz",
+  "imprint": {
+    "title": "Impressum",
+    "name": "Anbieter",
+    "address": "Anschrift",
+    "email": "Kontakt",
+    "unset": "Der Betreiber dieser Instanz hat noch keine Impressumsangaben hinterlegt.",
+    "metaDescription": "Impressum und Anbieterkennzeichnung von ExoSeal: Angaben zum Betreiber und Kontaktmöglichkeiten nach dem Digitale-Dienste-Gesetz.",
+    "eyebrow": "Rechtliches",
+    "heading": "Impressum",
+    "intro": "Angaben zum Betreiber dieser Instanz.",
+    "updated": "2. November 2026",
+    "updatedLabel": "Stand",
+    "provider": "Anbieter",
+    "contact": "Kontakt",
+    "representedBy": "Vertreten durch",
+    "register": "Handelsregister",
+    "vatId": "Umsatzsteuer-ID"
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "intro": "Wir nehmen den Schutz deiner Daten ernst. Hier steht, welche Daten wir wann und warum verarbeiten.",
+    "s1": {
+      "title": "Besucher und Empfänger",
+      "text": "Einen Link zu öffnen oder eine Anfrage zu beantworten braucht kein Konto und setzt keine Cookies. Kein Tracking, keine Analyse, keine externen Ressourcen. Wenn du das Farbschema umschaltest, wird deine Wahl nur lokal in deinem Browser gespeichert (localStorage) und nie an den Server gesendet. Unsere Anwendung speichert und protokolliert keine IP-Adressen. Setzt der Betreiber vorgeschaltete Schutzdienste ein, stehen sie unter \"Dienstleister\". Für die Begrenzung der Anfragen liegt nur ein mit einem Schlüssel gebildeter Hash der IP-Adresse etwa eine Minute im Arbeitsspeicher."
+    },
+    "s2": {
+      "title": "Angemeldete Nutzer",
+      "text": "Die Anmeldung läuft über den Identitätsanbieter des Betreibers. Bei Anfragen speichert der Server deine Anbieter-ID, E-Mail-Adresse und deinen Namen (um dem Empfänger deinen Namen zu zeigen und dich zu benachrichtigen). Bei gesendeten Links speichert er deine Anbieter-ID, eine optionale Bezeichnung, Erstell- und Ablaufzeit sowie den Status, damit du sie unter \"Gesendet\" siehst und zurückziehen kannst. Den Empfänger und den Inhalt kennt er nie. Dazu kommt ein Sitzungs-Cookie, das für bis zu 8 Stunden nötig ist, damit du angemeldet bleibst."
+    },
+    "s3": {
+      "title": "Geheimnisse und Antworten",
+      "text": "Sie werden in deinem Browser verschlüsselt, bevor sie hochgeladen werden. Der Server speichert nur Chiffretext und kann ihn nicht lesen. Geheimnisse werden beim ersten Anzeigen, bei Ablauf oder nach einer Meldung gelöscht. Danach bleibt für 30 Tage nur ein Vermerk (zufällige ID, Grund, Zeitpunkte, deine Anbieter-ID und die Bezeichnung), damit ein Link anzeigen kann, ob er geöffnet, abgelaufen, gemeldet oder zurückgezogen wurde und du den Eintrag in deiner Liste behältst. Der Vermerk enthält weder Inhalt noch Empfänger noch IP-Adresse. Antworten auf Anfragen werden beim Öffnen oder nach 7 Tagen gelöscht."
+    },
+    "s4": {
+      "title": "Anfragen",
+      "text": "Frage, Name und E-Mail des Erstellers, Public Key, mit Passphrase geschützter Private Key und Zeitstempel bleiben bis zum Löschen der Anfrage oder 30 Tage nach ihrem Ende gespeichert."
+    },
+    "s5": {
+      "title": "Benachrichtigungen",
+      "text": "Falls aktiviert, informiert eine Mail oder ein Webhook den Ersteller, dass eine Antwort eingegangen ist. Sie enthalten nie den Inhalt."
+    },
+    "toc": "Auf dieser Seite",
+    "eyebrow": "Rechtliches",
+    "heading": "Datenschutzerklärung",
+    "updated": "2. November 2026",
+    "updatedLabel": "Stand",
+    "services": {
+      "title": "Dienstleister",
+      "intro": "Diese Instanz setzt die folgenden Dienstleister ein. Sie sehen den Inhalt von Geheimnissen nie: Er ist im Browser verschlüsselt, und der Schlüssel hinter dem # wird von keinem Browser an einen Server gesendet.",
+      "cloudflare": {
+        "title": "Cloudflare (Auslieferung und Schutz)",
+        "text": "Die Instanz wird über Cloudflare ausgeliefert (Cloudflare, Inc., USA), als Vermittler und zum Schutz vor Angriffen. Dabei verarbeitet Cloudflare technisch bedingt die IP-Adresse und die Anfragedaten jedes Besuchers, auch beim Öffnen eines Links, und kann ein technisch notwendiges Cookie setzen. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und schnellen Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Die Übermittlung in die USA stützt sich auf das EU-US Data Privacy Framework und Standardvertragsklauseln; mit Cloudflare besteht ein Auftragsverarbeitungsvertrag."
+      },
+      "crowdsec": {
+        "title": "CrowdSec (Schutz vor Angriffen)",
+        "text": "Zum Schutz vor Angriffen prüft der Betreiber Zugriffe mit CrowdSec (CrowdSec SAS, Frankreich). Dafür wird die IP-Adresse verarbeitet, um bösartige Muster zu erkennen und Angreifer zu sperren. Rechtsgrundlage ist unser berechtigtes Interesse an der Sicherheit des Dienstes (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden nicht an die CrowdSec-Community weitergegeben."
+      },
+      "crowdsecshare": {
+        "title": "CrowdSec (Schutz vor Angriffen, mit Community)",
+        "text": "Zum Schutz vor Angriffen prüft der Betreiber Zugriffe mit CrowdSec (CrowdSec SAS, Frankreich). Dafür wird die IP-Adresse verarbeitet, um bösartige Muster zu erkennen und Angreifer zu sperren. Erkannte Angriffe (IP-Adresse des Angreifers, Art des Angriffs, Zeitpunkt) werden an die CrowdSec-Community gemeldet; die IP-Adressen normaler Besucher werden nicht geteilt. Rechtsgrundlage ist unser berechtigtes Interesse an der Sicherheit des Dienstes (Art. 6 Abs. 1 lit. f DSGVO)."
+      }
+    }
+  },
+  "termsLink": "Nutzungsbedingungen",
+  "terms": {
+    "heading": "Nutzungsbedingungen",
+    "eyebrow": "Rechtliches",
+    "intro": "Die Regeln für die Nutzung dieser ExoSeal-Instanz.",
+    "toc": "Abschnitte",
+    "updated": "2. November 2026",
+    "updatedLabel": "Stand",
+    "metaDescription": "Nutzungsbedingungen dieser ExoSeal-Instanz: Leistung, zulässige Nutzung, Zugang, Melden und Entfernen, Haftung.",
+    "operatorFallback": "der Betreiber dieser Instanz",
+    "scope": {
+      "title": "Geltungsbereich",
+      "text": "Diese Bedingungen gelten für die Nutzung dieser ExoSeal-Instanz, die {operator} (der Betreiber) bereitstellt. Wer Links erstellt, muss sich anmelden. Wer einen Link öffnet oder eine Anfrage beantwortet, braucht kein Konto und nutzt den Dienst ebenfalls unter diesen Bedingungen."
+    },
+    "service": {
+      "title": "Leistung",
+      "text": "Der Dienst übermittelt Geheimnisse und Antworten Ende-zu-Ende verschlüsselt. Der Betreiber speichert nur verschlüsselte Daten und kann sie nicht lesen. Geheimnisse werden beim ersten Anzeigen, bei Ablauf oder nach einer Meldung gelöscht. Es besteht kein Anspruch darauf, dass ein Geheimnis zu einem bestimmten Zeitpunkt oder überhaupt abrufbar ist."
+    },
+    "use": {
+      "title": "Zulässige Nutzung",
+      "text": "Der Dienst darf nur rechtmäßig genutzt werden. Verboten sind insbesondere das Übermitteln rechtswidriger Inhalte, Schadsoftware, Beleidigungen, Drohungen oder Spam, das Umgehen von Schutzmaßnahmen und das automatisierte Massenerstellen von Links. Nutzer sind für die von ihnen übermittelten Inhalte selbst verantwortlich."
+    },
+    "access": {
+      "title": "Zugang und Konto",
+      "text": "Das Erstellen von Links ist nur mit Anmeldung über den vom Betreiber festgelegten Identitätsanbieter möglich. Der Betreiber kann den Zugang sperren, wenn gegen diese Bedingungen verstoßen wird oder ein Missbrauch zu befürchten ist."
+    },
+    "report": {
+      "title": "Melden und Entfernen",
+      "text": "Jeder Empfänger kann einen Link über die Funktion \"Diesen Link melden\" löschen lassen, ohne den Inhalt zu lesen. Weil der Betreiber Inhalte nicht lesen kann, erfolgt die Entfernung über diese Funktion. Hinweise auf Missbrauch können an die im Impressum genannte Adresse gerichtet werden."
+    },
+    "availability": {
+      "title": "Verfügbarkeit",
+      "text": "Der Dienst wird ohne Zusicherung einer bestimmten Verfügbarkeit bereitgestellt. Wartung, Störungen und Änderungen können zu Unterbrechungen führen."
+    },
+    "liability": {
+      "title": "Haftung",
+      "text": "Der Betreiber haftet unbeschränkt bei Vorsatz, grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit. Bei leichter Fahrlässigkeit haftet er nur für die Verletzung wesentlicher Vertragspflichten und begrenzt auf den vorhersehbaren, vertragstypischen Schaden. Der Betreiber haftet nicht für Folgen eines verlorenen Schlüssels, einer vergessenen Passphrase oder eines weitergegebenen Links."
+    },
+    "changes": {
+      "title": "Änderungen",
+      "text": "Der Betreiber kann diese Bedingungen mit Wirkung für die Zukunft ändern. Die jeweils aktuelle Fassung steht auf dieser Seite."
+    },
+    "law": {
+      "title": "Anwendbares Recht",
+      "text": "Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Zwingende Verbraucherschutzvorschriften bleiben unberührt."
+    }
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "eyebrow": "Open source · End-to-end encrypted",
+  "title": "Share a secret. <once>Once.</once>",
+  "lead": "Passwords and keys do not belong in chat or email. Send them as a link that works exactly one time, or ask someone to send you one. Your browser encrypts it, our server only ever sees ciphertext.",
+  "secondary": "Request a secret",
+  "signInNote": "Run it yourself with your own login provider. Recipients never need an account.",
+  "ticker": {
+    "a": "AES-256-GCM",
+    "b": "Key stays in the link fragment",
+    "c": "Deleted on first view",
+    "d": "No cookies for visitors",
+    "e": "No IP addresses in the database",
+    "f": "Open source, AGPL-3.0",
+    "g": "Self-hostable"
+  },
+  "why": {
+    "eyebrow": "Why this exists",
+    "title": "Secrets travel through the least safe places.",
+    "intro": "A password sent in chat stays in the chat history, in the mailbox, in backups and in every search index, usually for years. Most leaks are not hacks, they are old messages.",
+    "badTitle": "Chat or email",
+    "goodTitle": "ExoSeal",
+    "compare": {
+      "rows": {
+        "a": {
+          "name": "How long it stays",
+          "bad": "For years, searchable",
+          "good": "Deleted after the first view"
+        },
+        "b": {
+          "name": "Who can read it",
+          "bad": "Everyone with access to the mailbox, workspace or backups",
+          "good": "Only whoever opens the link first"
+        },
+        "c": {
+          "name": "If it gets forwarded",
+          "bad": "It spreads and you never know",
+          "good": "A copy is useless, the link works once"
+        },
+        "d": {
+          "name": "What the provider sees",
+          "bad": "Plain text on their servers",
+          "good": "Ciphertext, never the key"
+        },
+        "e": {
+          "name": "If someone else opened it",
+          "bad": "You do not find out",
+          "good": "The link is used up, so you know"
+        },
+        "f": {
+          "name": "Cleaning up",
+          "bad": "Manual, usually forgotten",
+          "good": "Automatic, including expiry"
+        }
+      }
+    }
+  },
+  "how": {
+    "title": "How it works",
+    "intro": "Three steps. The person who receives it needs no account.",
+    "lead": "Encryption happens in your browser. The server never sees anything readable, and after the first open it is all gone.",
+    "one": {
+      "title": "Encrypt in the browser",
+      "text": "Your browser creates a random key and encrypts the text with AES-256-GCM before anything leaves your device.",
+      "more": "You write your secret into the form and choose how long it lives, from one minute to seven days. If you like, you set a password. Everything this needs happens in your browser. Only afterwards does anything reach the server, and that is just the encrypted text.",
+      "points": {
+        "a": "A new, random key for every secret",
+        "b": "Encrypted with AES-256-GCM, right in the browser",
+        "c": "Lifetime from one minute to seven days"
+      }
+    },
+    "two": {
+      "title": "Share the link",
+      "text": "The server stores only the ciphertext. The key is appended to the link after a #, and browsers never send that part to a server.",
+      "more": "You get a link made of three parts: the address, the ID of the secret and, after the #, the key. You send the link through any channel, for example chat, email or a ticket. The server only sees the address and the ID, never the part after the #.",
+      "points": {
+        "a": "The server only knows address and ID",
+        "b": "The key sits behind the #",
+        "c": "Browsers never send that part"
+      }
+    },
+    "three": {
+      "title": "Open once, then gone",
+      "text": "The first reveal returns the ciphertext and deletes it in the same step. The recipient's browser decrypts it with the key from the link.",
+      "more": "Whoever opens the link needs no account. On the first visit the browser fetches the ciphertext, the server deletes it in the same step, and the browser decrypts it locally. If someone opens the link again, nothing is left. If it is never opened, the server deletes the secret when it expires.",
+      "points": {
+        "a": "The recipient needs no account",
+        "b": "Deleted on first view",
+        "c": "Otherwise deleted at expiry"
+      }
+    },
+    "step": "Step {n}"
+  },
+  "principle": {
+    "eyebrow": "The principle",
+    "title": "The <once>key</once> lives behind the #.",
+    "text": "A web address has parts. Everything up to the # is sent to the server when you open the link. Everything after the # stays in your browser by design. ExoSeal puts the key there, so the server can store the secret but can never read it.",
+    "host": {
+      "label": "Server",
+      "text": "Where the request goes."
+    },
+    "id": {
+      "label": "Secret ID",
+      "text": "Finds the ciphertext. Random and unguessable."
+    },
+    "key": {
+      "label": "Key",
+      "text": "Stays in the browser. Never transmitted."
+    },
+    "urlHost": "seal.example.com",
+    "urlId": "/s/3f9c1e7a-4b2d-4c8e",
+    "urlKey": "#Zk4q9XvT2mLw0Pz3"
+  },
+  "useCases": {
+    "title": "Where ExoSeal really helps.",
+    "intro": "Everywhere a password would otherwise end up in a chat.",
+    "a": {
+      "title": "Access for a freelancer",
+      "text": "Send the server login once, without it living in your project chat forever.",
+      "steps": {
+        "you": "Paste the login, pick a lifetime, optionally set a password.",
+        "link": "Send the link by chat, the password separately.",
+        "other": "Opens it once and copies the login. After that it is deleted."
+      }
+    },
+    "b": {
+      "title": "Keys from a customer",
+      "text": "Ask for an API key or login with a request link. They answer in the browser, no account needed.",
+      "steps": {
+        "you": "Create a request with your question.",
+        "link": "Send the request link to the customer.",
+        "other": "Answers in the browser, no account needed. You open the answer with your passphrase."
+      }
+    },
+    "c": {
+      "title": "Onboarding new people",
+      "text": "Initial passwords, Wi-Fi keys and licence codes, gone after the first use.",
+      "steps": {
+        "you": "Paste the starter password or Wi-Fi key, pick a short lifetime.",
+        "link": "Put the link into the welcome message.",
+        "other": "Reads it on first view. After that it is gone."
+      }
+    },
+    "d": {
+      "title": "Support with sensitive data",
+      "text": "A customer has to share a recovery code? Let them reply encrypted instead of in the ticket.",
+      "steps": {
+        "you": "Create a request and say what the customer should send.",
+        "link": "Put the link into the ticket reply.",
+        "other": "Answers encrypted instead of typing the code into the ticket."
+      }
+    },
+    "roles": {
+      "you": "You",
+      "link": "Link",
+      "other": "Other side"
+    },
+    "introMore": "ExoSeal fits anything that only one person should read and that should not exist afterwards: logins, API keys, recovery codes, contract details. Pick a case and see how it plays out.",
+    "eyebrow": "Use cases"
+  },
+  "modes": {
+    "title": "Two ways to share a secret.",
+    "intro": "Send a secret you have, or ask for one you need.",
+    "send": {
+      "title": "Send",
+      "text": "You have a secret and someone needs it. Paste it, pick a lifetime, optionally add a password, and share the link.",
+      "cta": "Sign in and send"
+    },
+    "request": {
+      "title": "Request",
+      "text": "Someone has a secret you need. Send them a request link: they answer in the browser, you open the reply with your passphrase.",
+      "cta": "Sign in and request"
+    }
+  },
+  "security": {
+    "title": "What the server really sees.",
+    "intro": "Nothing in readable form. Here is the full list.",
+    "note": "All of this can be read in the source code. ExoSeal is open source under AGPL-3.0, and you can run it on your own server, so only you see what is stored there.",
+    "eyebrow": "Transparency",
+    "see": {
+      "title": "The server sees",
+      "a": {
+        "name": "Ciphertext",
+        "text": "Your secret or reply, unreadable without the key."
+      },
+      "b": {
+        "name": "Your question",
+        "text": "In plain text, because the recipient has to read it."
+      },
+      "c": {
+        "name": "Name and email",
+        "text": "Only with requests you create, to show your name and notify you."
+      },
+      "word": "sees",
+      "d": {
+        "name": "Who sends and when",
+        "text": "Your provider ID plus time, lifetime and status of every sent link, so you see it under \"Sent\". It never knows the recipient."
+      }
+    },
+    "never": {
+      "title": "The server never sees",
+      "a": {
+        "name": "The key",
+        "text": "It lives in the part of the link after the # and in your passphrase."
+      },
+      "b": {
+        "name": "Your IP address",
+        "text": "The application never stores or logs it. Rate limiting uses a keyed hash that expires within a minute."
+      },
+      "c": {
+        "name": "What notifications say",
+        "text": "Mail and webhook only say that a reply arrived, never what it says."
+      },
+      "word": "never sees",
+      "d": {
+        "name": "Who opens your link",
+        "text": "The server never knows who receives or opens a link."
+      }
+    }
+  },
+  "limits": {
+    "title": "What we cannot promise you.",
+    "intro": "Honest limits, because trust needs them. No tool protects against everything, so we tell you upfront where ExoSeal ends.",
+    "a": {
+      "title": "A compromised server",
+      "text": "A hacked server could serve modified code. That is why ExoSeal is open source and self-hostable. For very high stakes use a native tool like age or GPG."
+    },
+    "b": {
+      "title": "A leaked full link",
+      "text": "Whoever gets the whole link before the recipient opens it first. You will see that it is used up."
+    },
+    "c": {
+      "title": "A weak passphrase",
+      "text": "For requests, the wrapped private key is stored encrypted. A short passphrase could be guessed offline if the database leaked. Use a long sentence."
+    },
+    "d": {
+      "title": "A lost passphrase",
+      "text": "There is no recovery. The reply is gone."
+    },
+    "eyebrow": "Honestly"
+  },
+  "faq": {
+    "title": "Questions we hear often.",
+    "intro": "Short, honest answers about security, usage and operation. You will find more on the FAQ page.",
+    "q1": {
+      "q": "Can ExoSeal read my secrets?",
+      "a": "No. They are encrypted in your browser with a key that stays in the part of the link after the #. Browsers never send that part to a server."
+    },
+    "q2": {
+      "q": "What if someone else opens the link first?",
+      "a": "Then it is gone for the intended recipient, and they see that the link was used up. Treat the secret as compromised, change it and send a new one. Under \"Sent\" you see whether and when a link was opened."
+    },
+    "q3": {
+      "q": "Why do I have to sign in to send?",
+      "a": "So strangers cannot use this server as a free relay. Recipients and people answering a request never need an account."
+    },
+    "q4": {
+      "q": "Do you track visitors?",
+      "a": "No cookies for visitors, no analytics, no external resources, and our application stores and logs no IP addresses."
+    },
+    "q5": {
+      "q": "How long does a secret live?",
+      "a": "You choose one hour, one day or seven days. The secret is deleted on first view, on expiry or when you withdraw the link, whichever comes first."
+    },
+    "q6": {
+      "q": "Can I run it myself?",
+      "a": "Yes. ExoSeal is open source under AGPL-3.0 and runs with one docker compose file and your own login provider."
+    },
+    "q7": {
+      "q": "Which encryption does ExoSeal use?",
+      "a": "AES-256-GCM, right in your browser. The key is generated randomly and lives only in the part of the link after the #. Requests additionally use a key pair whose private part stays protected by your passphrase."
+    },
+    "q8": {
+      "q": "Does the recipient need an account?",
+      "a": "No. Recipients just open the link in their browser. People answering a request do not need an account either."
+    },
+    "q9": {
+      "q": "What is a request link?",
+      "a": "You use it to ask someone to send you a secret. They answer in their browser, the answer is encrypted, and you open it with your passphrase."
+    },
+    "q10": {
+      "q": "Can I add an extra password?",
+      "a": "Yes. When sending, you can optionally set a password. Give it to the recipient another way, for example by phone. Without the link and the password the secret cannot be opened."
+    },
+    "q11": {
+      "q": "Where is the data stored and for how long?",
+      "a": "Only the ciphertext lives on the server, until it is viewed for the first time, the chosen lifetime (one hour to seven days) ends or you withdraw the link. Then it is deleted. For 30 days only a note without content remains, so the link can say what happened to it."
+    },
+    "q12": {
+      "q": "How is this different from email or chat?",
+      "a": "In email and chat a password often stays readable in the history forever. An ExoSeal link works exactly once, and the server can never read the content."
+    }
+  },
+  "closing": {
+    "title": "Ready to share your first secret?",
+    "text": "ExoSeal is open source under AGPL-3.0. Run it yourself with one docker compose file and your own login provider.",
+    "cta": "Self-host"
+  },
+  "sections": {
+    "how": "How it works",
+    "security": "Security"
+  },
+  "stage": {
+    "alt": "Animation: a secret is typed, encrypted to dots in the browser and shared as a link. The server only sees the part before the hash sign, the key behind it stays with the recipient. The recipient opens the link once, then everything is deleted.",
+    "note": "WiFi password: Summer2026!",
+    "placeholder": "Type a secret …",
+    "chipSealed": "Encrypted",
+    "chipLink": "Link ready",
+    "chipOpened": "Decrypted",
+    "chipGone": "Deleted",
+    "goneText": "Deleted. The link is no longer valid.",
+    "serverSees": "What the server sees",
+    "keyStays": "The key stays with the recipient",
+    "steps": {
+      "s1": "Write",
+      "s2": "Encrypt",
+      "s3": "Share",
+      "s4": "Open",
+      "s5": "Gone"
+    },
+    "steps3": {
+      "s1": "Encrypt",
+      "s2": "Share",
+      "s3": "Open"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "ExoSeal: share passwords and secrets once, securely",
+      "description": "Share passwords and keys as a one-time link. End-to-end encrypted in the browser, the server only sees ciphertext. Open source (AGPL-3.0) and self-hostable."
+    },
+    "faq": {
+      "title": "ExoSeal FAQ: encryption, one-time links, self-hosting",
+      "description": "Answers about encryption, one-time links, requests, privacy and self-hosting."
+    }
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "intro": "Short answers about security, usage and operation.",
+    "search": "Search questions …",
+    "all": "All",
+    "count": "{n} questions",
+    "empty": "No question found. Try a different search term.",
+    "cat": {
+      "security": "Security",
+      "privacy": "Privacy",
+      "usage": "Usage",
+      "operation": "Operation"
+    },
+    "ctaTitle": "Still have a question?",
+    "ctaText": "Have a look at the guides or try ExoSeal right away. Sharing a secret takes a few seconds.",
+    "ctaGuides": "Go to the guides",
+    "ctaLogin": "Sign in now"
+  },
+  "gh": "View on GitHub",
+  "hero": {
+    "selfHost": "Self-host"
+  },
+  "proof": {
+    "eyebrow": "Trust",
+    "title": "Verifiable, not just promised.",
+    "intro": "We do not ask you to take our word for it. The code is open, the encryption runs in your browser, and you can check every claim on this page yourself.",
+    "code": "View the source",
+    "host": "Self-host",
+    "server": "What the server sees",
+    "a": {
+      "n": "0",
+      "label": "cookies for visitors"
+    },
+    "b": {
+      "n": "0",
+      "label": "IP addresses in the database"
+    },
+    "c": {
+      "n": "256",
+      "label": "bit AES-GCM, in the browser"
+    },
+    "d": {
+      "n": "AGPL",
+      "label": "3.0, source code open"
+    }
+  },
+  "blog": {
+    "eyebrow": "From the blog",
+    "title": "News from Exostruction.",
+    "intro": "Posts about ExoSeal and about keeping credentials safe, straight from the developers.",
+    "german": "The posts are in German.",
+    "read": "Read",
+    "all": "All posts on the blog"
+  },
+  "blogPage": {
+    "metaTitle": "Blog: news about ExoSeal | ExoSeal",
+    "metaDescription": "Posts about ExoSeal and about keeping credentials safe, straight from the developers at Exostruction.",
+    "eyebrow": "Blog",
+    "title": "News about ExoSeal.",
+    "intro": "What we build, what changes and what we learn along the way. The posts appear on the Exostruction blog.",
+    "german": "The posts are in German.",
+    "search": "Search posts …",
+    "allCategories": "All",
+    "count": "{n} posts",
+    "read": "Read",
+    "noMatch": "No post found. Try a different search term.",
+    "empty": "No posts yet. Please check back soon.",
+    "outbound": "All posts on the Exostruction blog"
+  }
+}

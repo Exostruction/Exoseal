@@ -1,0 +1,11 @@
+.env
+bin/
+obj/
+node_modules/
+.next/
+**/.yarn/*
+!**/.yarn/releases
+!**/.yarn/patches
+next-env.d.ts
+e2e/node_modules
+tsconfig.tsbuildinfo

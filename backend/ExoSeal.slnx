@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ExoSeal.Api/ExoSeal.Api.csproj" />
+    <Project Path="src/ExoSeal.Application/ExoSeal.Application.csproj" />
+    <Project Path="src/ExoSeal.Domain/ExoSeal.Domain.csproj" />
+    <Project Path="src/ExoSeal.Infrastructure/ExoSeal.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ExoSeal.Tests/ExoSeal.Tests.csproj" />
+  </Folder>
+</Solution>

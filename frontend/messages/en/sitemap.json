@@ -1,0 +1,29 @@
+{
+  "metaTitle": "Sitemap | ExoSeal",
+  "metaDescription": "All public pages of ExoSeal at a glance: home, guides, frequently asked questions, privacy and legal notice.",
+  "title": "Sitemap",
+  "intro": "All pages of ExoSeal at a glance.",
+  "groups": {
+    "product": "Product",
+    "app": "App",
+    "legal": "Legal",
+    "guides": "Guides"
+  },
+  "links": {
+    "start": "Home",
+    "how": "How it works",
+    "security": "Security",
+    "faq": "FAQ",
+    "login": "Sign in",
+    "send": "Send a secret",
+    "request": "Request a secret",
+    "privacy": "Privacy",
+    "imprint": "Imprint",
+    "guides": "Guides",
+    "compare": "Comparison",
+    "openSource": "Open source",
+    "changelog": "Changelog",
+    "terms": "Terms of use",
+    "blog": "Blog"
+  }
+}

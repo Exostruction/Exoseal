@@ -1,0 +1,74 @@
+{
+  "title": "Deine Anfragen",
+  "newCta": "Neue Anfrage",
+  "empty": "Keine Anfragen gefunden.",
+  "filterLabel": "Status",
+  "filter": {
+    "all": "Alle",
+    "open": "Offen",
+    "answered": "Beantwortet",
+    "consumed": "Geöffnet",
+    "expired": "Abgelaufen"
+  },
+  "sortLabel": "Sortierung",
+  "sort": {
+    "created_desc": "Neueste zuerst",
+    "created_asc": "Älteste zuerst",
+    "expires_asc": "Läuft bald ab",
+    "expires_desc": "Läuft spät ab"
+  },
+  "status": {
+    "open": "Offen",
+    "answered": "Beantwortet",
+    "consumed": "Geöffnet",
+    "expired": "Abgelaufen"
+  },
+  "columns": {
+    "question": "Frage",
+    "status": "Status",
+    "created": "Erstellt",
+    "expires": "Gültig bis"
+  },
+  "total": "{total, plural, one {# Anfrage} other {# Anfragen}}",
+  "prev": "Zurück",
+  "next": "Weiter",
+  "page": "Seite {page} von {pages}",
+  "detail": {
+    "back": "Zurück zur Übersicht",
+    "created": "Erstellt",
+    "expires": "Gültig bis",
+    "answered": "Beantwortet",
+    "statusText": {
+      "open": "Wartet auf die Antwort deines Kunden.",
+      "answered": "Antwort eingegangen. Du kannst sie einmal öffnen.",
+      "consumed": "Die Antwort wurde geöffnet und gelöscht.",
+      "expired": "Abgelaufen. Es kann nichts mehr geöffnet werden."
+    },
+    "linkNote": "Den Link für den Kunden siehst du nur direkt nach dem Erstellen."
+  },
+  "open": {
+    "title": "Antwort öffnen",
+    "text": "Gib deine Passphrase ein. Die Antwort wird in deinem Browser entschlüsselt und danach auf dem Server gelöscht.",
+    "passphrase": "Passphrase",
+    "submit": "Antwort öffnen",
+    "working": "Wird entschlüsselt …",
+    "answerLabel": "Antwort",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "deleted": "Auf dem Server gelöscht. Der Text wird nur hier angezeigt.",
+    "errors": {
+      "wrongPassphrase": "Die Passphrase stimmt nicht. Die Antwort ist noch nicht gelöscht.",
+      "gone": "Die Antwort ist nicht mehr verfügbar.",
+      "corrupt": "Die Antwort lässt sich nicht entschlüsseln.",
+      "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+      "generic": "Das hat nicht geklappt. Bitte erneut versuchen."
+    }
+  },
+  "delete": {
+    "button": "Anfrage löschen",
+    "confirm": "Wirklich löschen? Eine noch nicht geöffnete Antwort geht verloren.",
+    "confirmButton": "Ja, löschen",
+    "cancel": "Abbrechen",
+    "error": "Das Löschen hat nicht geklappt."
+  }
+}

@@ -1,0 +1,33 @@
+# Lokaler Login ohne echten Anbieter, plus Mailpit für Benachrichtigungen. Nur für die Entwicklung:
+#   docker compose -f docker-compose.yml -f docker-compose.build.yml -f docker-compose.dev-idp.yml up -d --build
+# Kein hosts-Eintrag nötig: Browser lösen *.localhost von selbst auf 127.0.0.1 auf, im Docker-Netz ist mockidp.localhost ein Alias des Mock-Servers.
+# Browser und Backend brauchen dieselbe Adresse für den Anbieter, daher gleicher Name und Port (8081) auf beiden Seiten.
+# Mock-Login: http://mockidp.localhost:8081 (beliebiger Benutzername, Claims als JSON, z. B. {"email":"ich@exostruction.com","email_verified":true,"name":"Ich"}).
+# Mails ansehen: http://localhost:8025
+services:
+  mockidp:
+    image: ghcr.io/navikt/mock-oauth2-server:6.1.4
+    environment:
+      SERVER_PORT: "8081"
+    ports: ["8081:8081"]
+    networks:
+      default:
+        aliases: [mockidp.localhost]
+
+  mailpit:
+    image: axllent/mailpit:v1.33.0
+    ports: ["8025:8025"]
+
+  backend:
+    environment:
+      Auth__MetadataAddress: http://mockidp.localhost:8081/default/.well-known/openid-configuration
+      Auth__ClientId: exoseal-dev
+      Auth__ClientSecret: dev-secret-not-for-production
+      Auth__AllowInsecureMetadata: "true"
+      Auth__AllowedEmailDomains: exostruction.com
+      Notifications__Mail__Host: mailpit
+      Notifications__Mail__Port: "1025"
+      Notifications__Mail__From: seal@example.org
+    depends_on:
+      - mockidp
+      - mailpit

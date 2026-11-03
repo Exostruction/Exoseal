@@ -1,0 +1,33 @@
+{
+  "title": "Neue Anfrage",
+  "intro": "Du fragst bei einem Kunden einen geheimen Wert an, zum Beispiel Zugangsdaten. Der Kunde braucht keinen Login. Seine Antwort wird in seinem Browser verschlüsselt, nur du kannst sie öffnen.",
+  "questionLabel": "Was brauchst du?",
+  "questionHint": "Das sieht der Kunde, zum Beispiel „Zugangsdaten für den Staging-Server“. Bitte hier nichts Geheimes eintragen.",
+  "expiryLabel": "Der Kunde kann antworten innerhalb von",
+  "expiry": {
+    "1": "1 Tag",
+    "3": "3 Tagen",
+    "7": "7 Tagen",
+    "14": "14 Tagen",
+    "30": "30 Tagen"
+  },
+  "passphraseLabel": "Passphrase",
+  "passphraseHint": "Schützt deinen privaten Schlüssel. Ohne sie ist die Antwort unwiederbringlich verloren, es gibt keine Wiederherstellung. Mindestens {min} Zeichen, am besten ein langer Satz.",
+  "confirmLabel": "Passphrase wiederholen",
+  "submit": "Anfrage erstellen",
+  "submitting": "Schlüssel wird erzeugt …",
+  "linkTitle": "Link für deinen Kunden",
+  "linkHint": "Schick diesen Link deinem Kunden. Er wird nur jetzt angezeigt. Der Teil nach dem # stellt sicher, dass der Kunde den richtigen Schlüssel bekommt, der Server sieht ihn nie.",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "toList": "Zu meinen Anfragen",
+  "errors": {
+    "question": "Bitte eine Frage eintragen (höchstens 200 Zeichen).",
+    "tooShort": "Die Passphrase ist zu kurz.",
+    "mismatch": "Die Passphrasen stimmen nicht überein.",
+    "unauthorized": "Deine Sitzung ist abgelaufen. Bitte neu anmelden.",
+    "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+    "generic": "Das hat nicht geklappt. Bitte erneut versuchen.",
+    "quota": "Du hast die Höchstzahl laufender Anfragen erreicht (200). Lösche alte Anfragen oder warte, bis sie ablaufen."
+  }
+}
