@@ -11,6 +11,7 @@
 <div align="center">
 
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-e11d48?style=flat-square)](LICENSE)
+[![CI](https://github.com/Exostruction/Exoseal/actions/workflows/ci.yml/badge.svg)](https://github.com/Exostruction/Exoseal/actions/workflows/ci.yml)
 ![Self-hosted with Docker](https://img.shields.io/badge/self--hosted-Docker-e11d48?style=flat-square)
 ![Zero knowledge](https://img.shields.io/badge/server-zero%20knowledge-e11d48?style=flat-square)
 ![.NET 10 and Next.js](https://img.shields.io/badge/.NET%2010%20%C2%B7%20Next.js-e11d48?style=flat-square)
