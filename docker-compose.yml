@@ -1,0 +1,89 @@
+services:
+  frontend:
+    image: ghcr.io/exostruction/exoseal-frontend:${EXOSEAL_VERSION:-latest}
+    environment:
+      BACKEND_URL: http://backend:8080
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:3000}
+      GITHUB_REPO: ${GITHUB_REPO:-}
+      ABUSE_EMAIL: ${ABUSE_EMAIL:-}
+      PRIVACY_SERVICES: ${PRIVACY_SERVICES:-}
+      INDEXNOW: ${INDEXNOW:-}
+      BLOG_ENABLED: ${BLOG_ENABLED:-}
+      BLOG_CATEGORY: ${BLOG_CATEGORY:-}
+      IMPRINT_NAME: ${IMPRINT_NAME:-}
+      IMPRINT_ADDRESS: ${IMPRINT_ADDRESS:-}
+      IMPRINT_EMAIL: ${IMPRINT_EMAIL:-}
+      IMPRINT_REPRESENTED_BY: ${IMPRINT_REPRESENTED_BY:-}
+      IMPRINT_PHONE: ${IMPRINT_PHONE:-}
+      IMPRINT_REGISTER: ${IMPRINT_REGISTER:-}
+      IMPRINT_VAT_ID: ${IMPRINT_VAT_ID:-}
+    # Nur lokal erreichbar: nach außen geht es über deinen Reverse-Proxy (TLS), nie direkt.
+    ports: ["127.0.0.1:${FRONTEND_PORT:-3000}:3000"]
+    depends_on:
+      backend: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  # Backend ist absichtlich nicht nach außen veröffentlicht (kein "ports:").
+  backend:
+    image: ghcr.io/exostruction/exoseal-backend:${EXOSEAL_VERSION:-latest}
+    environment:
+      ConnectionStrings__Postgres: Host=postgres;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+      ConnectionStrings__Valkey: valkey:6379
+      Auth__MetadataAddress: ${OIDC_METADATA_ADDRESS:-}
+      Auth__ClientId: ${OIDC_CLIENT_ID:-}
+      Auth__ClientSecret: ${OIDC_CLIENT_SECRET:-}
+      Auth__PublicBaseUrl: ${PUBLIC_URL:-http://localhost:3000}/api/v1
+      Auth__AllowedEmailDomains: ${ALLOWED_EMAIL_DOMAINS:-}
+      Auth__AllowedEmails: ${ALLOWED_EMAILS:-}
+      Network__TrustedProxyHops: ${TRUSTED_PROXY_HOPS:-0}
+      Network__ClientIpHeader: ${CLIENT_IP_HEADER:-}
+      App__PublicUrl: ${PUBLIC_URL:-http://localhost:3000}
+      Notifications__Mail__Host: ${SMTP_HOST:-}
+      Notifications__Mail__Port: ${SMTP_PORT:-587}
+      Notifications__Mail__User: ${SMTP_USER:-}
+      Notifications__Mail__Password: ${SMTP_PASSWORD:-}
+      Notifications__Mail__From: ${SMTP_FROM:-}
+      Notifications__Webhook__Url: ${WEBHOOK_URL:-}
+      Notifications__Webhook__Secret: ${WEBHOOK_SECRET:-}
+    depends_on:
+      postgres: { condition: service_healthy }
+      valkey: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:18.6-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes: [pgdata:/var/lib/postgresql]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  # Nur Cache/Rate-Limit, keine Persistenz, nie Secrets.
+  valkey:
+    image: valkey/valkey:9.1.3-alpine
+    command: ["valkey-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  pgdata:

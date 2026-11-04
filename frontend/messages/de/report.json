@@ -1,0 +1,17 @@
+{
+  "title": "Link melden",
+  "text": "Wenn dieser Link missbräuchlich verwendet wird oder du ihn nicht erwartet hast, kannst du ihn hier melden. Das Geheimnis wird gelöscht, ohne dass es jemand liest.",
+  "submit": "Melden und löschen",
+  "submitting": "Wird gelöscht …",
+  "done": "Erledigt. Das Geheimnis wurde gelöscht.",
+  "contact": "Weitere Hinweise bitte an {email}.",
+  "errors": {
+    "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+    "generic": "Das hat nicht geklappt. Bitte erneut versuchen.",
+    "gone": "Diesen Link gibt es nicht (mehr). Es gibt nichts zu melden.",
+    "goneOpened": "Dieser Link wurde schon geöffnet, das Geheimnis ist bereits gelöscht. Es gibt nichts mehr zu melden. Falls du ihn nicht selbst geöffnet hast, sag dem Absender Bescheid.",
+    "goneExpired": "Dieser Link ist abgelaufen und das Geheimnis wurde gelöscht. Es gibt nichts zu melden.",
+    "goneReported": "Dieser Link wurde schon gemeldet und das Geheimnis gelöscht.",
+    "goneRevoked": "Der Absender hat diesen Link zurückgezogen und das Geheimnis gelöscht. Es gibt nichts zu melden."
+  }
+}

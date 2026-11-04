@@ -1,0 +1,31 @@
+{
+  "title": "Sent secrets",
+  "newCta": "New secret",
+  "total": "{total} links",
+  "empty": "You have not sent a secret yet.",
+  "noLabel": "Unlabeled ({id})",
+  "page": "Page {page} of {pages}",
+  "prev": "Previous",
+  "next": "Next",
+  "note": "Here you only see whether a link is still open, opened, expired, reported or withdrawn. The server never knows the content or the recipient. Entries stay for 30 days after the link ends.",
+  "columns": {
+    "label": "Label",
+    "status": "Status",
+    "created": "Created",
+    "expires": "Valid until",
+    "actions": "Actions"
+  },
+  "status": {
+    "available": "Open",
+    "opened": "Opened",
+    "expired": "Expired",
+    "reported": "Reported",
+    "revoked": "Withdrawn"
+  },
+  "revoke": "Withdraw",
+  "revoking": "Withdrawing …",
+  "confirm": "Withdraw it?",
+  "confirmYes": "Yes, withdraw",
+  "cancel": "Cancel",
+  "error": "Withdrawing did not work."
+}

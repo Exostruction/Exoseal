@@ -1,0 +1,10 @@
+{
+  "notFoundTitle": "Diese Seite ist verschwunden.",
+  "notFoundText": "Vielleicht hat jemand sie weggeräumt, oder der Link ist alt. Kein Drama, hier sind ein paar Stellen, wo du weitermachen kannst.",
+  "errorTitle": "Etwas ist schiefgelaufen.",
+  "errorText": "Es ist ein Fehler aufgetreten. Deine Daten wurden nicht angezeigt oder gespeichert. Probier es nochmal.",
+  "retry": "Erneut versuchen",
+  "home": "Zur Startseite",
+  "help": "Oder direkt zu:",
+  "quickLabel": "Schnelllinks"
+}

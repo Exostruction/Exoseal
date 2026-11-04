@@ -1,0 +1,406 @@
+{
+  "eyebrow": "Open Source · Ende-zu-Ende-verschlüsselt",
+  "title": "Ein Geheimnis teilen. <once>Einmal.</once>",
+  "lead": "Passwörter und Schlüssel gehören nicht in Chat oder Mail. Schick sie als Link, der genau einmal funktioniert, oder bitte jemanden, dir eins zu schicken. Dein Browser verschlüsselt, unser Server sieht nur Chiffretext.",
+  "secondary": "Geheimnis anfragen",
+  "signInNote": "Selbst betreiben mit eigenem Login-Anbieter. Empfänger brauchen nie ein Konto.",
+  "ticker": {
+    "a": "AES-256-GCM",
+    "b": "Schlüssel bleibt im Link-Fragment",
+    "c": "Gelöscht beim ersten Anzeigen",
+    "d": "Keine Cookies für Besucher",
+    "e": "Keine IP-Adressen in der Datenbank",
+    "f": "Open Source, AGPL-3.0",
+    "g": "Selbst hostbar"
+  },
+  "why": {
+    "eyebrow": "Warum es das gibt",
+    "title": "Geheimnisse reisen durch die unsichersten Orte.",
+    "intro": "Ein Passwort im Chat bleibt in der Chat-Historie, im Postfach, in Backups und in jedem Suchindex, meist jahrelang. Die meisten Lecks sind keine Hacks, sondern alte Nachrichten.",
+    "badTitle": "Chat oder Mail",
+    "goodTitle": "ExoSeal",
+    "compare": {
+      "rows": {
+        "a": {
+          "name": "Wie lange es bleibt",
+          "bad": "Jahrelang, durchsuchbar",
+          "good": "Nach dem ersten Anzeigen gelöscht"
+        },
+        "b": {
+          "name": "Wer es lesen kann",
+          "bad": "Jeder mit Zugriff auf Postfach, Workspace oder Backups",
+          "good": "Nur wer den Link zuerst öffnet"
+        },
+        "c": {
+          "name": "Wenn es weitergeleitet wird",
+          "bad": "Es verbreitet sich, ohne dass du es merkst",
+          "good": "Eine Kopie ist nutzlos, der Link gilt einmal"
+        },
+        "d": {
+          "name": "Was der Anbieter sieht",
+          "bad": "Klartext auf seinen Servern",
+          "good": "Chiffretext, nie den Schlüssel"
+        },
+        "e": {
+          "name": "Wenn jemand anderes es geöffnet hat",
+          "bad": "Du erfährst es nicht",
+          "good": "Der Link ist verbraucht, so merkst du es"
+        },
+        "f": {
+          "name": "Aufräumen",
+          "bad": "Von Hand, meist vergessen",
+          "good": "Automatisch, inklusive Ablauf"
+        }
+      }
+    }
+  },
+  "how": {
+    "title": "So funktioniert es",
+    "intro": "Drei Schritte. Wer es empfängt, braucht kein Konto.",
+    "lead": "Verschlüsselt wird bei dir im Browser. Der Server sieht nie etwas Lesbares, und nach dem ersten Öffnen ist alles weg.",
+    "one": {
+      "title": "Im Browser verschlüsseln",
+      "text": "Dein Browser erzeugt einen zufälligen Schlüssel und verschlüsselt den Text mit AES-256-GCM, bevor etwas dein Gerät verlässt.",
+      "more": "Du schreibst dein Geheimnis in das Formular und wählst die Laufzeit, zwischen einer Minute und sieben Tagen. Auf Wunsch setzt du ein Passwort. Alles, was dafür nötig ist, läuft in deinem Browser. Erst danach geht etwas an den Server, und zwar nur der verschlüsselte Text.",
+      "points": {
+        "a": "Für jedes Geheimnis ein neuer, zufälliger Schlüssel",
+        "b": "Verschlüsselt mit AES-256-GCM, direkt im Browser",
+        "c": "Laufzeit von einer Minute bis sieben Tage"
+      }
+    },
+    "two": {
+      "title": "Link teilen",
+      "text": "Der Server speichert nur den Chiffretext. Der Schlüssel hängt hinter einem # am Link, und Browser senden diesen Teil nie an einen Server.",
+      "more": "Du bekommst einen Link, der aus drei Teilen besteht: der Adresse, der Kennung des Geheimnisses und hinter dem # dem Schlüssel. Den Link schickst du über einen beliebigen Kanal, zum Beispiel per Chat, Mail oder Ticket. Der Server sieht nur die Adresse und die Kennung, nie den Teil hinter dem #.",
+      "points": {
+        "a": "Der Server kennt nur Adresse und Kennung",
+        "b": "Der Schlüssel steht hinter dem #",
+        "c": "Browser senden diesen Teil nie ab"
+      }
+    },
+    "three": {
+      "title": "Einmal öffnen, dann weg",
+      "text": "Das erste Anzeigen liefert den Chiffretext und löscht ihn im selben Schritt. Der Browser des Empfängers entschlüsselt ihn mit dem Schlüssel aus dem Link.",
+      "more": "Wer den Link öffnet, braucht kein Konto. Beim ersten Aufruf holt der Browser den Chiffretext, der Server löscht ihn im selben Schritt, und der Browser entschlüsselt ihn lokal. Öffnet danach jemand den Link erneut, ist nichts mehr da. Wird er nie geöffnet, löscht der Server das Geheimnis zum Ablauf.",
+      "points": {
+        "a": "Der Empfänger braucht kein Konto",
+        "b": "Beim ersten Anzeigen gelöscht",
+        "c": "Sonst gelöscht zum Ablauf"
+      }
+    },
+    "step": "Schritt {n}"
+  },
+  "principle": {
+    "eyebrow": "Das Prinzip",
+    "title": "Der <once>Schlüssel</once> steht hinter dem #.",
+    "text": "Eine Webadresse hat Teile. Alles bis zum # geht an den Server, wenn du den Link öffnest. Alles nach dem # bleibt per Definition im Browser. ExoSeal legt den Schlüssel dorthin, deshalb kann der Server das Geheimnis speichern, aber nie lesen.",
+    "host": {
+      "label": "Server",
+      "text": "Wohin die Anfrage geht."
+    },
+    "id": {
+      "label": "Geheimnis-ID",
+      "text": "Findet den Chiffretext. Zufällig und nicht erratbar."
+    },
+    "key": {
+      "label": "Schlüssel",
+      "text": "Bleibt im Browser. Wird nie übertragen."
+    },
+    "urlHost": "seal.example.com",
+    "urlId": "/s/3f9c1e7a-4b2d-4c8e",
+    "urlKey": "#Zk4q9XvT2mLw0Pz3"
+  },
+  "useCases": {
+    "title": "Wo ExoSeal dir wirklich hilft.",
+    "intro": "Überall, wo ein Passwort sonst im Chat landen würde.",
+    "a": {
+      "title": "Zugang für Freelancer",
+      "text": "Schick den Server-Login einmal, ohne dass er für immer im Projekt-Chat liegt.",
+      "steps": {
+        "you": "Login einfügen, Laufzeit wählen, optional ein Passwort setzen.",
+        "link": "Den Link per Chat schicken, das Passwort getrennt.",
+        "other": "Öffnet ihn einmal und kopiert den Login. Danach ist er gelöscht."
+      }
+    },
+    "b": {
+      "title": "Schlüssel vom Kunden",
+      "text": "Frag einen API-Key oder Login per Anfrage-Link an. Der Kunde antwortet im Browser, ohne Konto.",
+      "steps": {
+        "you": "Eine Anfrage mit deiner Frage erstellen.",
+        "link": "Den Anfrage-Link an den Kunden schicken.",
+        "other": "Antwortet im Browser, ohne Konto. Du öffnest die Antwort mit deiner Passphrase."
+      }
+    },
+    "c": {
+      "title": "Neue Leute einarbeiten",
+      "text": "Startpasswörter, WLAN-Schlüssel und Lizenzcodes, nach der ersten Nutzung weg.",
+      "steps": {
+        "you": "Startpasswort oder WLAN-Schlüssel einfügen, kurze Laufzeit wählen.",
+        "link": "Den Link in die Willkommensnachricht legen.",
+        "other": "Liest es beim ersten Anzeigen. Danach ist es weg."
+      }
+    },
+    "d": {
+      "title": "Support mit sensiblen Daten",
+      "text": "Ein Kunde muss einen Wiederherstellungscode teilen? Lass ihn verschlüsselt antworten statt im Ticket.",
+      "steps": {
+        "you": "Eine Anfrage erstellen und sagen, was der Kunde senden soll.",
+        "link": "Den Link in die Antwort im Ticket legen.",
+        "other": "Antwortet verschlüsselt, statt den Code ins Ticket zu schreiben."
+      }
+    },
+    "roles": {
+      "you": "Du",
+      "link": "Link",
+      "other": "Gegenüber"
+    },
+    "introMore": "ExoSeal passt zu allem, was nur eine Person lesen soll und danach nicht mehr existieren muss: Zugangsdaten, API-Schlüssel, Wiederherstellungscodes, Vertragsdetails. Such dir einen Fall aus und sieh, wie der Ablauf aussieht.",
+    "eyebrow": "Anwendungsfälle"
+  },
+  "modes": {
+    "title": "Zwei Wege, ein Geheimnis zu teilen.",
+    "intro": "Ein Geheimnis senden, das du hast, oder eins anfragen, das du brauchst.",
+    "send": {
+      "title": "Senden",
+      "text": "Du hast ein Geheimnis und jemand braucht es. Einfügen, Laufzeit wählen, optional ein Passwort, Link teilen.",
+      "cta": "Anmelden und senden"
+    },
+    "request": {
+      "title": "Anfragen",
+      "text": "Jemand hat ein Geheimnis, das du brauchst. Schick einen Anfrage-Link: Die Person antwortet im Browser, du öffnest die Antwort mit deiner Passphrase.",
+      "cta": "Anmelden und anfragen"
+    }
+  },
+  "security": {
+    "title": "Was der Server wirklich sieht.",
+    "intro": "Nichts in lesbarer Form. Hier die vollständige Liste.",
+    "note": "Alles davon lässt sich im Quellcode nachlesen. ExoSeal ist Open Source unter AGPL-3.0, und du kannst es auf deinem eigenen Server betreiben, dann siehst nur du, was auf dem Server liegt.",
+    "eyebrow": "Transparenz",
+    "see": {
+      "title": "Der Server sieht",
+      "a": {
+        "name": "Chiffretext",
+        "text": "Dein Geheimnis oder deine Antwort, ohne den Schlüssel nicht lesbar."
+      },
+      "b": {
+        "name": "Deine Frage",
+        "text": "Im Klartext, weil der Empfänger sie lesen muss."
+      },
+      "c": {
+        "name": "Name und Mail",
+        "text": "Nur bei Anfragen, die du erstellst, um deinen Namen zu zeigen und dich zu benachrichtigen."
+      },
+      "word": "sieht",
+      "d": {
+        "name": "Wer wann sendet",
+        "text": "Deine Anbieter-ID sowie Zeit, Laufzeit und Status jedes gesendeten Links, damit du ihn unter \"Gesendet\" siehst. Den Empfänger kennt er nie."
+      }
+    },
+    "never": {
+      "title": "Der Server sieht nie",
+      "a": {
+        "name": "Den Schlüssel",
+        "text": "Er steht im Teil des Links nach dem # und in deiner Passphrase."
+      },
+      "b": {
+        "name": "Deine IP-Adresse",
+        "text": "Die Anwendung speichert oder protokolliert sie nie. Die Begrenzung nutzt einen Hash mit Schlüssel, der nach einer Minute verfällt."
+      },
+      "c": {
+        "name": "Inhalte der Benachrichtigungen",
+        "text": "Mail und Webhook sagen nur, dass eine Antwort da ist, nie was drinsteht."
+      },
+      "word": "sieht nie",
+      "d": {
+        "name": "Wer deinen Link öffnet",
+        "text": "Der Server weiß nie, wer einen Link bekommt oder öffnet."
+      }
+    }
+  },
+  "limits": {
+    "title": "Was wir dir nicht versprechen können.",
+    "intro": "Ehrliche Grenzen, denn Vertrauen braucht sie. Kein Werkzeug schützt vor allem, deshalb sagen wir dir vorher, wo ExoSeal endet.",
+    "a": {
+      "title": "Ein kompromittierter Server",
+      "text": "Ein gehackter Server könnte veränderten Code ausliefern. Deshalb ist ExoSeal Open Source und selbst hostbar. Bei sehr hohem Einsatz nimm ein natives Werkzeug wie age oder GPG."
+    },
+    "b": {
+      "title": "Ein geleakter vollständiger Link",
+      "text": "Wer den ganzen Link vor dem Empfänger bekommt, öffnet zuerst. Du siehst dann, dass er verbraucht ist."
+    },
+    "c": {
+      "title": "Eine schwache Passphrase",
+      "text": "Bei Anfragen liegt der verpackte Private Key verschlüsselt auf dem Server. Eine kurze Passphrase ließe sich bei einem Datenbank-Leak offline erraten. Nimm einen langen Satz."
+    },
+    "d": {
+      "title": "Eine vergessene Passphrase",
+      "text": "Es gibt keine Wiederherstellung. Die Antwort ist weg."
+    },
+    "eyebrow": "Ehrlich gesagt"
+  },
+  "faq": {
+    "title": "Fragen, die wir oft hören.",
+    "intro": "Kurze, ehrliche Antworten zu Sicherheit, Benutzung und Betrieb. Mehr findest du auf der FAQ-Seite.",
+    "q1": {
+      "q": "Kann ExoSeal meine Geheimnisse lesen?",
+      "a": "Nein. Sie werden in deinem Browser mit einem Schlüssel verschlüsselt, der im Teil des Links nach dem # bleibt. Browser senden diesen Teil nie an einen Server."
+    },
+    "q2": {
+      "q": "Was, wenn jemand anderes den Link zuerst öffnet?",
+      "a": "Dann ist es für den vorgesehenen Empfänger weg, und er sieht, dass der Link verbraucht ist. Behandle das Geheimnis als kompromittiert, ändere es und schick ein neues. Unter \"Gesendet\" siehst du, ob und wann ein Link geöffnet wurde."
+    },
+    "q3": {
+      "q": "Warum muss ich mich zum Senden anmelden?",
+      "a": "Damit Fremde diesen Server nicht als kostenloses Relais nutzen. Empfänger und Personen, die eine Anfrage beantworten, brauchen nie ein Konto."
+    },
+    "q4": {
+      "q": "Trackt ihr Besucher?",
+      "a": "Keine Cookies für Besucher, keine Analyse, keine externen Ressourcen, und unsere Anwendung speichert und protokolliert keine IP-Adressen."
+    },
+    "q5": {
+      "q": "Wie lange lebt ein Geheimnis?",
+      "a": "Du wählst eine Stunde, einen Tag oder sieben Tage. Das Geheimnis wird beim ersten Anzeigen, bei Ablauf oder wenn du den Link zurückziehst gelöscht, je nachdem was zuerst kommt."
+    },
+    "q6": {
+      "q": "Kann ich es selbst betreiben?",
+      "a": "Ja. ExoSeal ist Open Source unter AGPL-3.0 und läuft mit einer docker-compose-Datei und deinem eigenen Login-Anbieter."
+    },
+    "q7": {
+      "q": "Welche Verschlüsselung nutzt ExoSeal?",
+      "a": "AES-256-GCM, direkt in deinem Browser. Der Schlüssel wird zufällig erzeugt und steht nur im Teil des Links nach dem #. Bei Anfragen kommt zusätzlich ein Schlüsselpaar zum Einsatz, dessen privater Teil mit deiner Passphrase geschützt bleibt."
+    },
+    "q8": {
+      "q": "Braucht der Empfänger ein Konto?",
+      "a": "Nein. Empfänger öffnen den Link einfach im Browser. Auch wer eine Anfrage beantwortet, braucht kein Konto."
+    },
+    "q9": {
+      "q": "Was ist ein Anfrage-Link?",
+      "a": "Damit bittest du jemanden, dir ein Geheimnis zu schicken. Die Person antwortet im Browser, die Antwort wird verschlüsselt, und du öffnest sie mit deiner Passphrase."
+    },
+    "q10": {
+      "q": "Kann ich ein zusätzliches Passwort setzen?",
+      "a": "Ja. Beim Senden kannst du optional ein Passwort vergeben. Gib es dem Empfänger auf einem anderen Weg, zum Beispiel per Telefon. Ohne Link und Passwort lässt sich das Geheimnis nicht öffnen."
+    },
+    "q11": {
+      "q": "Wo werden die Daten gespeichert und wie lange?",
+      "a": "Auf dem Server liegt nur der Chiffretext, bis er zum ersten Mal angezeigt wird, die gewählte Laufzeit (eine Stunde bis sieben Tage) abläuft oder du den Link zurückziehst. Danach wird er gelöscht. 30 Tage lang bleibt nur ein Vermerk ohne Inhalt, damit der Link sagen kann, was mit ihm passiert ist."
+    },
+    "q12": {
+      "q": "Was ist der Unterschied zu einer Mail oder einem Chat?",
+      "a": "In Mail und Chat bleibt ein Passwort oft für immer lesbar im Verlauf. Ein ExoSeal-Link funktioniert genau einmal, und der Server kann den Inhalt nie lesen."
+    }
+  },
+  "closing": {
+    "title": "Bereit für dein erstes Geheimnis?",
+    "text": "ExoSeal ist Open Source unter AGPL-3.0. Betreib es selbst mit einer docker-compose-Datei und deinem eigenen Login-Anbieter.",
+    "cta": "Selbst hosten"
+  },
+  "sections": {
+    "how": "So funktioniert es",
+    "security": "Sicherheit"
+  },
+  "stage": {
+    "alt": "Animation: Ein Geheimnis wird getippt, im Browser zu Punkten verschlüsselt und als Link geteilt. Der Server sieht nur den Teil vor dem Rautezeichen, der Schlüssel dahinter bleibt beim Empfänger. Der Empfänger öffnet den Link einmal, danach ist alles gelöscht.",
+    "note": "WLAN-Passwort: Sommer2026!",
+    "placeholder": "Geheimnis eintippen …",
+    "chipSealed": "Verschlüsselt",
+    "chipLink": "Link bereit",
+    "chipOpened": "Entschlüsselt",
+    "chipGone": "Gelöscht",
+    "goneText": "Gelöscht. Der Link ist ungültig.",
+    "serverSees": "Das sieht der Server",
+    "keyStays": "Der Schlüssel bleibt beim Empfänger",
+    "steps": {
+      "s1": "Schreiben",
+      "s2": "Verschlüsseln",
+      "s3": "Teilen",
+      "s4": "Öffnen",
+      "s5": "Weg"
+    },
+    "steps3": {
+      "s1": "Verschlüsseln",
+      "s2": "Teilen",
+      "s3": "Öffnen"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "ExoSeal: Passwörter und Geheimnisse einmalig und sicher teilen",
+      "description": "Teile Passwörter und Schlüssel als Einmal-Link. Ende-zu-Ende-verschlüsselt im Browser, der Server sieht nur Chiffretext. Open Source (AGPL-3.0) und selbst hostbar."
+    },
+    "faq": {
+      "title": "Häufige Fragen zu ExoSeal: Verschlüsselung, Einmal-Links",
+      "description": "Antworten zu Verschlüsselung, Einmal-Links, Anfragen, Datenschutz und Selbst-Hosting."
+    }
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen",
+    "intro": "Kurze Antworten zu Sicherheit, Benutzung und Betrieb.",
+    "search": "Fragen durchsuchen …",
+    "all": "Alle",
+    "count": "{n} Fragen",
+    "empty": "Keine Frage gefunden. Probier einen anderen Suchbegriff.",
+    "cat": {
+      "security": "Sicherheit",
+      "privacy": "Datenschutz",
+      "usage": "Benutzung",
+      "operation": "Betrieb"
+    },
+    "ctaTitle": "Noch eine Frage offen?",
+    "ctaText": "Schau in die Anleitungen oder probier ExoSeal direkt aus. Ein Geheimnis zu teilen dauert wenige Sekunden.",
+    "ctaGuides": "Zu den Anleitungen",
+    "ctaLogin": "Jetzt anmelden"
+  },
+  "gh": "Auf GitHub ansehen",
+  "hero": {
+    "selfHost": "Selbst hosten"
+  },
+  "proof": {
+    "eyebrow": "Vertrauen",
+    "title": "Prüfbar statt nur versprochen.",
+    "intro": "Wir bitten dich nicht, uns zu glauben. Der Code ist offen, die Verschlüsselung läuft in deinem Browser, und du kannst jede Aussage auf dieser Seite selbst nachprüfen.",
+    "code": "Quellcode ansehen",
+    "host": "Selbst hosten",
+    "server": "Was der Server sieht",
+    "a": {
+      "n": "0",
+      "label": "Cookies für Besucher"
+    },
+    "b": {
+      "n": "0",
+      "label": "IP-Adressen in der Datenbank"
+    },
+    "c": {
+      "n": "256",
+      "label": "Bit AES-GCM, im Browser"
+    },
+    "d": {
+      "n": "AGPL",
+      "label": "3.0, Quellcode offen"
+    }
+  },
+  "blog": {
+    "eyebrow": "Aus dem Blog",
+    "title": "Neues von Exostruction.",
+    "intro": "Beiträge zu ExoSeal und zur Sicherheit rund um Zugangsdaten, direkt von den Entwicklern.",
+    "german": "Die Beiträge sind auf Deutsch.",
+    "read": "Lesen",
+    "all": "Alle Beiträge im Blog"
+  },
+  "blogPage": {
+    "metaTitle": "Blog: Neues rund um ExoSeal | ExoSeal",
+    "metaDescription": "Beiträge zu ExoSeal und zur Sicherheit rund um Zugangsdaten, direkt von den Entwicklern bei Exostruction.",
+    "eyebrow": "Blog",
+    "title": "Neues rund um ExoSeal.",
+    "intro": "Was wir bauen, was sich ändert und was wir dabei lernen. Die Beiträge erscheinen im Blog von Exostruction.",
+    "german": "Die Beiträge sind auf Deutsch.",
+    "search": "Beiträge durchsuchen …",
+    "allCategories": "Alle",
+    "count": "{n} Beiträge",
+    "read": "Lesen",
+    "noMatch": "Kein Beitrag gefunden. Probier einen anderen Suchbegriff.",
+    "empty": "Noch keine Beiträge. Schau bald wieder vorbei.",
+    "outbound": "Alle Beiträge im Blog von Exostruction"
+  }
+}

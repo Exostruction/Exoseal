@@ -1,0 +1,95 @@
+{
+  "appName": "ExoSeal",
+  "language": "Sprache",
+  "createCta": "Geheimnis senden",
+  "requestsCta": "Anfragen",
+  "newRequestCta": "Neue Anfrage",
+  "skip": "Zum Inhalt springen",
+  "nav": {
+    "label": "Hauptmenü",
+    "security": "Sicherheit",
+    "privacy": "Datenschutz",
+    "product": "Produkt",
+    "open": "Menü öffnen",
+    "close": "Menü schließen",
+    "menu": {
+      "send": {
+        "title": "Geheimnis senden",
+        "text": "Einmal-Link, Ende-zu-Ende verschlüsselt."
+      },
+      "request": {
+        "title": "Geheimnis anfragen",
+        "text": "Zugangsdaten von anderen einsammeln."
+      },
+      "how": {
+        "title": "So funktioniert es",
+        "text": "Das Prinzip in fünf Schritten."
+      },
+      "faq": {
+        "title": "Häufige Fragen",
+        "text": "Antworten zu Sicherheit und Betrieb."
+      },
+      "guides": {
+        "title": "Anleitungen",
+        "text": "Teilen, anfragen und selbst hosten, Schritt für Schritt."
+      },
+      "compare": {
+        "title": "Vergleich",
+        "text": "ExoSeal gegen Mail, Chat und andere Werkzeuge."
+      },
+      "openSource": {
+        "title": "Open Source",
+        "text": "AGPL-3.0, Quellcode und Mitmachen."
+      },
+      "changelog": {
+        "title": "Änderungsprotokoll",
+        "text": "Was sich getan hat, mit Feed."
+      },
+      "blog": {
+        "title": "Blog",
+        "text": "Neuigkeiten und Beiträge zu ExoSeal."
+      }
+    },
+    "openSource": "Open Source"
+  },
+  "appNav": "Dein Bereich",
+  "foot": {
+    "tagline": "Secrets, die nur <once>einmal</once> gelesen werden.",
+    "product": "Produkt",
+    "send": "Geheimnis senden",
+    "request": "Geheimnis anfragen",
+    "how": "So funktioniert es",
+    "trust": "Vertrauen",
+    "security": "Was der Server sieht",
+    "project": "Projekt",
+    "license": "Open Source, AGPL-3.0",
+    "selfHost": "Selbst hostbar mit Docker",
+    "bottom": "ExoSeal. Gebaut von <maker>Exostruction</maker>.",
+    "faq": "Häufige Fragen",
+    "sitemap": "Seitenübersicht",
+    "guides": "Anleitungen",
+    "pSecurity": "Sicherheit",
+    "compare": "Vergleich",
+    "openSource": "Open Source",
+    "changelog": "Änderungsprotokoll",
+    "company": "Unternehmen",
+    "makerLink": "Exostruction",
+    "legalHead": "Rechtliches",
+    "feed": "Feed",
+    "blog": "Blog"
+  },
+  "theme": {
+    "toLight": "Zum hellen Design wechseln",
+    "toDark": "Zum dunklen Design wechseln"
+  },
+  "login": "Anmelden",
+  "toApp": "Zur App",
+  "sentCta": "Gesendet",
+  "refresh": "Aktualisieren",
+  "refreshing": "Wird aktualisiert …",
+  "groupSend": "Senden",
+  "groupRequests": "Anfragen",
+  "tabNew": "Neues Geheimnis",
+  "tabRequests": "Übersicht",
+  "tooMany": "Zu viele Anfragen in kurzer Zeit. Bitte warte eine Minute und lade die Seite dann neu."
+}

@@ -1,0 +1,95 @@
+{
+  "appName": "ExoSeal",
+  "language": "Language",
+  "createCta": "Send a secret",
+  "requestsCta": "Requests",
+  "newRequestCta": "New request",
+  "skip": "Skip to content",
+  "nav": {
+    "label": "Main",
+    "security": "Security",
+    "privacy": "Privacy",
+    "product": "Product",
+    "open": "Open menu",
+    "close": "Close menu",
+    "menu": {
+      "send": {
+        "title": "Send a secret",
+        "text": "One-time link, end-to-end encrypted."
+      },
+      "request": {
+        "title": "Request a secret",
+        "text": "Collect credentials from others."
+      },
+      "how": {
+        "title": "How it works",
+        "text": "The principle in five steps."
+      },
+      "faq": {
+        "title": "FAQ",
+        "text": "Answers on security and operation."
+      },
+      "guides": {
+        "title": "Guides",
+        "text": "Share, request and self-host, step by step."
+      },
+      "compare": {
+        "title": "Comparison",
+        "text": "ExoSeal against email, chat and other tools."
+      },
+      "openSource": {
+        "title": "Open source",
+        "text": "AGPL-3.0, source code and contributing."
+      },
+      "changelog": {
+        "title": "Changelog",
+        "text": "What changed, with a feed."
+      },
+      "blog": {
+        "title": "Blog",
+        "text": "News and posts about ExoSeal."
+      }
+    },
+    "openSource": "Open source"
+  },
+  "appNav": "Your workspace",
+  "foot": {
+    "tagline": "Secrets that are read only <once>once</once>.",
+    "product": "Product",
+    "send": "Send a secret",
+    "request": "Request a secret",
+    "how": "How it works",
+    "trust": "Trust",
+    "security": "What the server sees",
+    "project": "Project",
+    "license": "Open source, AGPL-3.0",
+    "selfHost": "Self-hostable with Docker",
+    "bottom": "ExoSeal. Built by <maker>Exostruction</maker>.",
+    "faq": "FAQ",
+    "sitemap": "Sitemap",
+    "guides": "Guides",
+    "pSecurity": "Security",
+    "compare": "Comparison",
+    "openSource": "Open source",
+    "changelog": "Changelog",
+    "company": "Company",
+    "makerLink": "Exostruction",
+    "legalHead": "Legal",
+    "feed": "Feed",
+    "blog": "Blog"
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "login": "Sign in",
+  "toApp": "Open app",
+  "sentCta": "Sent",
+  "refresh": "Refresh",
+  "refreshing": "Refreshing …",
+  "groupSend": "Send",
+  "groupRequests": "Requests",
+  "tabNew": "New secret",
+  "tabRequests": "Overview",
+  "tooMany": "Too many requests in a short time. Please wait a minute and reload the page."
+}

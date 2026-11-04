@@ -1,0 +1,22 @@
+{
+  "titleNamed": "{owner} bittet dich um eine Information",
+  "titleAnon": "Jemand bittet dich um eine Information",
+  "textLabel": "Deine Antwort",
+  "textHint": "Wird in deinem Browser verschlüsselt, bevor sie gesendet wird. Nur der Absender der Anfrage kann sie lesen. Maximal {max} Zeichen/Bytes.",
+  "validUntil": "Antwort möglich bis {date}.",
+  "submit": "Verschlüsselt senden",
+  "sending": "Wird verschlüsselt und gesendet …",
+  "loading": "Wird geladen …",
+  "errors": {
+    "gone": "Diese Anfrage wurde schon beantwortet oder ist abgelaufen.",
+    "missingKey": "Der Link ist unvollständig (der Teil nach dem # fehlt). Bitte den ganzen Link verwenden.",
+    "mismatch": "Dieser Link passt nicht zum Schlüssel der Anfrage. Gib hier nichts ein und frag beim Absender nach einem neuen Link.",
+    "empty": "Bitte einen Text eingeben.",
+    "tooLarge": "Der Text ist zu groß.",
+    "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+    "generic": "Das hat nicht geklappt. Bitte erneut versuchen."
+  },
+  "doneTitle": "Antwort gesendet",
+  "doneText": "Deine Antwort wurde in deinem Browser verschlüsselt und übertragen. Nur der Absender kann sie lesen, nicht einmal der Server.",
+  "doneHint": "Du kannst diese Seite jetzt schließen."
+}

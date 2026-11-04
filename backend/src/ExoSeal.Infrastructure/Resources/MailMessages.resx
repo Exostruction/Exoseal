@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="MailSubject" xml:space="preserve"><value>ExoSeal: a reply to your request has arrived</value></data>
+  <data name="MailBody" xml:space="preserve"><value>A reply to your request has arrived.&#10;&#10;Open it here: {0}&#10;&#10;The reply is decrypted in your browser only after you enter your passphrase. This email contains no content from the reply.</value></data>
+</root>

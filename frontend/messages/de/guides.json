@@ -1,0 +1,229 @@
+{
+  "index": {
+    "metaTitle": "Anleitungen | ExoSeal",
+    "metaDescription": "Schritt-für-Schritt-Anleitungen für ExoSeal: Geheimnisse sicher teilen, Geheimnisse anfragen und ExoSeal selbst hosten.",
+    "eyebrow": "Anleitungen",
+    "title": "Anleitungen",
+    "intro": "Schritt für Schritt erklärt: teilen, anfragen und selbst betreiben.",
+    "read": "Anleitung lesen",
+    "heading": "Schritt für Schritt zum sicheren Teilen.",
+    "steps": "{n} Schritte",
+    "search": "Anleitungen durchsuchen …",
+    "all": "Alle",
+    "empty": "Keine Anleitung gefunden. Probier einen anderen Suchbegriff."
+  },
+  "common": {
+    "home": "Start",
+    "guides": "Anleitungen",
+    "step": "Schritt {n}",
+    "tips": "Gut zu wissen",
+    "related": "Weitere Anleitungen",
+    "ctaSend": "Anmelden und Geheimnis senden",
+    "ctaRequest": "Anmelden und Geheimnis anfragen",
+    "ctaFaq": "Häufige Fragen",
+    "eyebrow": "Anleitung",
+    "back": "Zurück zur Übersicht",
+    "meta": "ExoSeal · {n} Schritte",
+    "toc": "Inhalt",
+    "sideEyebrow": "Bereit?",
+    "sideTitle": "Dein erster Link.",
+    "sideText": "Melde dich an und teile dein erstes Geheimnis in wenigen Sekunden.",
+    "faqTitle": "Häufige Fragen.",
+    "readMore": "Weiterlesen",
+    "allGuides": "Alle Anleitungen ansehen",
+    "authorEyebrow": "Entwickelt von",
+    "authorRole": "Entwickler von ExoSeal",
+    "authorText": "ExoSeal wird von Exostruction entwickelt, einer kleinen Softwarefirma aus Bayern. Der Quellcode ist offen (AGPL-3.0).",
+    "note": "Diese Anleitung beschreibt die Standardeinstellungen von ExoSeal. Bei selbst betriebenen Instanzen können einzelne Werte abweichen.",
+    "readTime": "{n} Min. Lesezeit",
+    "factA": "Ende-zu-Ende im Browser verschlüsselt",
+    "factB": "Der Link funktioniert genau einmal",
+    "factC": "Open Source unter AGPL-3.0",
+    "sideFaq": "Mehr in den häufigen Fragen"
+  },
+  "items": {
+    "send-secret": {
+      "title": "Ein Geheimnis sicher teilen",
+      "metaTitle": "Passwort sicher teilen: Anleitung für Einmal-Links | ExoSeal",
+      "description": "So teilst du ein Passwort oder einen Schlüssel als Einmal-Link: eingeben, Laufzeit wählen, optional ein Passwort setzen, Link verschicken. Ende-zu-Ende-verschlüsselt.",
+      "intro": "Ein Passwort, einen Schlüssel oder einen Zugangscode schickst du als Link, der genau einmal funktioniert. Verschlüsselt wird in deinem Browser, der Server sieht nur Chiffretext.",
+      "cta": "ctaSend",
+      "steps": {
+        "s1": {
+          "title": "Anmelden",
+          "text": "Öffne ExoSeal und melde dich an. Nur wer ein Geheimnis sendet, braucht ein Konto. Wer es später öffnet, braucht keins."
+        },
+        "s2": {
+          "title": "Geheimnis eingeben",
+          "text": "Füge das Passwort, den Schlüssel oder den Text bei „Geheimnis senden“ ein. Es passen bis zu 50.000 Zeichen hinein. Optional gibst du eine Bezeichnung für deine Liste „Gesendet“ ein. Sie wird nicht verschlüsselt, trag also nichts Geheimes ein."
+        },
+        "s3": {
+          "title": "Laufzeit wählen",
+          "text": "Wähle, wie lange der Link gültig bleibt: eine Stunde, ein Tag oder sieben Tage. Nach Ablauf wird das Geheimnis gelöscht, auch wenn niemand es geöffnet hat."
+        },
+        "s4": {
+          "title": "Optional ein Passwort setzen",
+          "text": "Mit einem zusätzlichen Passwort ist der Link allein wertlos. Gib das Passwort dem Empfänger auf einem anderen Weg, zum Beispiel per Telefon."
+        },
+        "s5": {
+          "title": "Link erstellen und verschicken",
+          "text": "Nach „Link erstellen“ verschlüsselt dein Browser das Geheimnis und zeigt dir den Link. Der Schlüssel steht im Teil hinter dem #, den dein Browser nie an einen Server sendet. Schick den ganzen Link."
+        },
+        "s6": {
+          "title": "Der Empfänger öffnet den Link",
+          "text": "Der Empfänger klickt auf „Geheimnis anzeigen“ und sieht den Inhalt. Sofort danach wird er gelöscht, und der Link funktioniert nicht mehr."
+        }
+      },
+      "tips": {
+        "t1": "Den ganzen Link verschicken, auch den Teil nach dem #. Ohne ihn lässt sich das Geheimnis nicht entschlüsseln.",
+        "t2": "Hat jemand anderes den Link zuerst geöffnet, ist das Geheimnis für den Empfänger weg. Behandle es dann als kompromittiert, ändere es und schick ein neues.",
+        "t3": "Der Empfänger kann einen verdächtigen Link über „Diesen Link melden“ löschen lassen, ohne den Inhalt zu lesen.",
+        "t4": "Unter „Gesendet“ siehst du, ob ein Link geöffnet, abgelaufen oder gemeldet wurde. Offene Links kannst du dort zurückziehen."
+      },
+      "tag": "Teilen",
+      "faq": {
+        "q1": {
+          "q": "Kann ich einen Link nachträglich zurückziehen?",
+          "a": "Ja, solange er nicht geöffnet wurde. Unter \"Gesendet\" ziehst du den Link zurück, das Geheimnis wird gelöscht und der Link meldet \"zurückgezogen\". Ein Link verfällt außerdem nach dem ersten Öffnen oder nach der gewählten Laufzeit. Gemeldete Links werden sofort gelöscht."
+        },
+        "q2": {
+          "q": "Was passiert, wenn der Empfänger den Link nicht öffnet?",
+          "a": "Nach Ablauf der gewählten Laufzeit wird das Geheimnis automatisch gelöscht, auch wenn niemand es geöffnet hat."
+        },
+        "q3": {
+          "q": "Ist das zusätzliche Passwort Pflicht?",
+          "a": "Nein, es ist optional. Es schützt zusätzlich, falls der Link in falsche Hände gerät. Gib das Passwort dem Empfänger auf einem anderen Weg."
+        },
+        "q4": {
+          "q": "Wie viel passt in ein Geheimnis?",
+          "a": "Bis zu 50.000 Zeichen. Das reicht für Passwörter, Schlüssel, Zugangscodes und kurze Texte."
+        }
+      },
+      "updated": "2026-11-02"
+    },
+    "request-secret": {
+      "title": "Ein Geheimnis anfragen",
+      "metaTitle": "Zugangsdaten von Kunden einsammeln: Anleitung | ExoSeal",
+      "description": "So bittest du Kunden oder Kollegen um ein Geheimnis: Anfrage erstellen, Link schicken, Antwort im Browser verschlüsselt erhalten und mit deiner Passphrase öffnen.",
+      "intro": "Du brauchst ein Passwort oder einen Schlüssel von jemand anderem? Schick einen Anfrage-Link. Die Person antwortet in ihrem Browser, ohne Konto, und nur du kannst die Antwort öffnen.",
+      "cta": "ctaRequest",
+      "steps": {
+        "s1": {
+          "title": "Neue Anfrage öffnen",
+          "text": "Melde dich an und wähle „Neue Anfrage“."
+        },
+        "s2": {
+          "title": "Frage formulieren",
+          "text": "Schreib bei „Was brauchst du?“, was du erwartest, zum Beispiel „Zugangsdaten für den Staging-Server“. Das sieht dein Gegenüber im Klartext, trag hier also nichts Geheimes ein."
+        },
+        "s3": {
+          "title": "Zeitraum wählen",
+          "text": "Lege fest, wie lange die Person antworten kann: 1, 3, 7, 14 oder 30 Tage."
+        },
+        "s4": {
+          "title": "Passphrase festlegen",
+          "text": "Die Passphrase schützt deinen privaten Schlüssel. Sie hat mindestens 10 Zeichen, am besten ein langer Satz. Es gibt keine Wiederherstellung: Ohne Passphrase ist die Antwort verloren."
+        },
+        "s5": {
+          "title": "Link verschicken",
+          "text": "Schick den Link an dein Gegenüber. Er wird nur jetzt angezeigt. Der Teil nach dem # stellt sicher, dass die Antwort für dich verschlüsselt wird, und er bleibt im Browser."
+        },
+        "s6": {
+          "title": "Die Person antwortet",
+          "text": "Dein Gegenüber öffnet den Link, sieht deine Frage und antwortet. Die Antwort wird im Browser verschlüsselt und kann nur einmal gesendet werden. Ein Konto ist nicht nötig."
+        },
+        "s7": {
+          "title": "Antwort öffnen",
+          "text": "Unter „Anfragen“ siehst du den Status. Öffne die Anfrage und gib deine Passphrase ein, um die Antwort zu entschlüsseln. Sie lässt sich nur einmal öffnen."
+        }
+      },
+      "tips": {
+        "t1": "Mit eingerichteter Mail oder einem Webhook erfährst du, dass eine Antwort da ist. Der Inhalt steht nie in der Nachricht.",
+        "t2": "Eine falsch eingegebene Passphrase kostet die Antwort nicht. Du kannst es erneut versuchen.",
+        "t3": "Anfragen kannst du jederzeit unter „Anfragen“ löschen."
+      },
+      "tag": "Anfragen",
+      "faq": {
+        "q1": {
+          "q": "Braucht mein Kunde ein Konto?",
+          "a": "Nein. Er öffnet den Anfrage-Link und antwortet direkt im Browser."
+        },
+        "q2": {
+          "q": "Was passiert, wenn ich meine Passphrase vergesse?",
+          "a": "Dann ist die Antwort verloren. Es gibt keine Wiederherstellung, weil nur du sie mit deiner Passphrase entschlüsseln kannst."
+        },
+        "q3": {
+          "q": "Wie lange bleiben Antworten gespeichert?",
+          "a": "Eine Antwort wird beim Öffnen oder nach 7 Tagen gelöscht. Die Anfrage selbst bleibt bis zum Löschen oder 30 Tage nach ihrem Ende."
+        },
+        "q4": {
+          "q": "Kann der Server die Antwort lesen?",
+          "a": "Nein. Sie wird im Browser deines Kunden verschlüsselt, der Server speichert nur Chiffretext."
+        }
+      },
+      "updated": "2026-11-02"
+    },
+    "self-hosting": {
+      "title": "ExoSeal selbst hosten",
+      "metaTitle": "ExoSeal selbst hosten: Anleitung für Docker | ExoSeal",
+      "description": "ExoSeal ist Open Source (AGPL-3.0) und läuft mit Docker Compose auf deinem eigenen Server. So richtest du Domain, Anmeldung, Reverse-Proxy und Benachrichtigungen ein.",
+      "intro": "ExoSeal läuft mit einer docker-compose-Datei auf deinem eigenen Server und mit deinem eigenen Login-Anbieter. Dann liegt alles bei dir.",
+      "cta": "ctaFaq",
+      "steps": {
+        "s1": {
+          "title": "Voraussetzungen",
+          "text": "Du brauchst einen Server mit Docker und Docker Compose, eine Domain mit HTTPS über einen Reverse-Proxy wie Caddy oder nginx und einen OIDC-Anmeldeanbieter mit PKCE (S256)."
+        },
+        "s2": {
+          "title": "Konfiguration anlegen",
+          "text": "Lade docker-compose.yml und .env.example aus dem Repository in einen leeren Ordner und kopiere .env.example nach .env. Setze ein eigenes Datenbankpasswort und PUBLIC_URL auf deine Adresse, zum Beispiel https://seal.example.com. Die Datei .env gehört nie ins Repository."
+        },
+        "s3": {
+          "title": "Anmeldung einrichten",
+          "text": "Trage OIDC_METADATA_ADDRESS, OIDC_CLIENT_ID und OIDC_CLIENT_SECRET deines Anbieters ein. Beim Anbieter hinterlegst du die Redirect-URI PUBLIC_URL/api/v1/auth/callback."
+        },
+        "s4": {
+          "title": "Wer senden darf",
+          "text": "Setze ALLOWED_EMAIL_DOMAINS und/oder ALLOWED_EMAILS. Nur diese Adressen können Links erstellen. Sobald die Anmeldung aktiv ist, braucht es mindestens einen Eintrag."
+        },
+        "s5": {
+          "title": "Reverse-Proxy davorsetzen",
+          "text": "Der Proxy leitet auf das Frontend (Port 3000) weiter und kümmert sich um TLS. Setze TRUSTED_PROXY_HOPS auf 1, wenn genau ein Proxy davorsteht, damit die Begrenzung pro Besucher richtig zählt. Kommt die echte IP stattdessen in einem eigenen Header an (Cloudflare: CF-Connecting-IP), setze CLIENT_IP_HEADER auf dessen Namen, aber nur, wenn der Server ausschließlich über diesen Proxy erreichbar ist."
+        },
+        "s6": {
+          "title": "Starten",
+          "text": "Starte alles mit docker compose pull und danach docker compose up -d. Die fertigen Images ziehst du dabei aus der GitHub Container Registry, gebaut wird nichts. Der Gesundheitscheck des Frontends meldet, wenn alles läuft. Danach rufst du deine Adresse auf und meldest dich an."
+        },
+        "s7": {
+          "title": "Optional: Benachrichtigungen, Impressum, Meldungen",
+          "text": "Mit SMTP_* oder WEBHOOK_URL bekommst du Bescheid, wenn eine Anfrage beantwortet wurde. Die Angaben IMPRINT_* (Name, Anschrift, E-Mail, Vertreter, Telefon, Register, USt-ID) füllen Impressum und Nutzungsbedingungen, PRIVACY_SERVICES nennt vorgeschaltete Dienste wie Cloudflare in der Datenschutzerklärung, ABUSE_EMAIL zeigt eine Kontaktadresse für Missbrauchsmeldungen."
+        }
+      },
+      "tips": {
+        "t1": "Sichere die Datenbank ohne die Tabelle secrets. Geheimnisse sind flüchtig, ein Backup würde bereits geöffnete wieder zurückbringen.",
+        "t2": "Schalte keine Zugriffsprotokolle ein, die Pfade enthalten: In der Adresse steht die ID des Geheimnisses.",
+        "t3": "Die ausführlichen Betriebshinweise stehen im Ordner docs des Projekts."
+      },
+      "tag": "Betrieb",
+      "faq": {
+        "q1": {
+          "q": "Brauche ich einen eigenen Login-Anbieter?",
+          "a": "Ja. ExoSeal meldet über einen OpenID-Connect-Anbieter an. Welche E-Mail-Adressen oder Domains sich anmelden dürfen, legst du über eine Allowlist fest."
+        },
+        "q2": {
+          "q": "Welche Lizenz gilt?",
+          "a": "ExoSeal steht unter der AGPL-3.0. Du darfst es selbst betreiben und anpassen. Änderungen an einer öffentlich betriebenen Instanz musst du ebenfalls offenlegen."
+        },
+        "q3": {
+          "q": "Worauf muss ich beim Reverse-Proxy achten?",
+          "a": "Die Zahl der Proxys vor ExoSeal muss zur Einstellung TRUSTED_PROXY_HOPS passen. Sonst teilen sich alle Besucher dasselbe Limit gegen Missbrauch."
+        },
+        "q4": {
+          "q": "Brauche ich einen Mailserver?",
+          "a": "Nein. Benachrichtigungen per Mail oder Webhook sind optional."
+        }
+      },
+      "updated": "2026-11-03"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Your requests",
+  "newCta": "New request",
+  "empty": "No requests found.",
+  "filterLabel": "Status",
+  "filter": {
+    "all": "All",
+    "open": "Open",
+    "answered": "Answered",
+    "consumed": "Opened",
+    "expired": "Expired"
+  },
+  "sortLabel": "Sort by",
+  "sort": {
+    "created_desc": "Newest first",
+    "created_asc": "Oldest first",
+    "expires_asc": "Expiring soon",
+    "expires_desc": "Expiring last"
+  },
+  "status": {
+    "open": "Open",
+    "answered": "Answered",
+    "consumed": "Opened",
+    "expired": "Expired"
+  },
+  "columns": {
+    "question": "Question",
+    "status": "Status",
+    "created": "Created",
+    "expires": "Valid until"
+  },
+  "total": "{total, plural, one {# request} other {# requests}}",
+  "prev": "Previous",
+  "next": "Next",
+  "page": "Page {page} of {pages}",
+  "detail": {
+    "back": "Back to overview",
+    "created": "Created",
+    "expires": "Valid until",
+    "answered": "Answered",
+    "statusText": {
+      "open": "Waiting for your customer's reply.",
+      "answered": "A reply has arrived. You can open it once.",
+      "consumed": "The reply was opened and deleted.",
+      "expired": "Expired. Nothing can be opened any more."
+    },
+    "linkNote": "You can only see the customer link right after creating the request."
+  },
+  "open": {
+    "title": "Open reply",
+    "text": "Enter your passphrase. The reply is decrypted in your browser and then deleted on the server.",
+    "passphrase": "Passphrase",
+    "submit": "Open reply",
+    "working": "Decrypting …",
+    "answerLabel": "Reply",
+    "copy": "Copy",
+    "copied": "Copied",
+    "deleted": "Deleted on the server. The text is shown only here.",
+    "errors": {
+      "wrongPassphrase": "The passphrase is wrong. The reply has not been deleted.",
+      "gone": "The reply is no longer available.",
+      "corrupt": "The reply cannot be decrypted.",
+      "rateLimited": "Too many requests. Please try again later.",
+      "generic": "That didn't work. Please try again."
+    }
+  },
+  "delete": {
+    "button": "Delete request",
+    "confirm": "Really delete? A reply that has not been opened yet will be lost.",
+    "confirmButton": "Yes, delete",
+    "cancel": "Cancel",
+    "error": "Deleting did not work."
+  }
+}

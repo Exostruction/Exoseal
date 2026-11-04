@@ -1,0 +1,31 @@
+{
+  "title": "Gesendete Geheimnisse",
+  "newCta": "Neues Geheimnis",
+  "total": "{total} Links",
+  "empty": "Du hast noch kein Geheimnis gesendet.",
+  "noLabel": "Ohne Bezeichnung ({id})",
+  "page": "Seite {page} von {pages}",
+  "prev": "Zurück",
+  "next": "Weiter",
+  "note": "Hier siehst du nur, ob ein Link noch offen, geöffnet, abgelaufen, gemeldet oder zurückgezogen ist. Den Inhalt und den Empfänger kennt der Server nie. Die Einträge bleiben 30 Tage nach dem Ende des Links.",
+  "columns": {
+    "label": "Bezeichnung",
+    "status": "Status",
+    "created": "Erstellt",
+    "expires": "Gültig bis",
+    "actions": "Aktionen"
+  },
+  "status": {
+    "available": "Offen",
+    "opened": "Geöffnet",
+    "expired": "Abgelaufen",
+    "reported": "Gemeldet",
+    "revoked": "Zurückgezogen"
+  },
+  "revoke": "Zurückziehen",
+  "revoking": "Wird zurückgezogen …",
+  "confirm": "Wirklich zurückziehen?",
+  "confirmYes": "Ja, zurückziehen",
+  "cancel": "Abbrechen",
+  "error": "Das Zurückziehen hat nicht geklappt."
+}

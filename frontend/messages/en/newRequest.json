@@ -1,0 +1,33 @@
+{
+  "title": "New request",
+  "intro": "You ask a customer for a secret value, for example credentials. The customer needs no login. Their reply is encrypted in their browser, and only you can open it.",
+  "questionLabel": "What do you need?",
+  "questionHint": "The customer sees this, for example “Credentials for the staging server”. Please do not put anything secret here.",
+  "expiryLabel": "The customer can reply within",
+  "expiry": {
+    "1": "1 day",
+    "3": "3 days",
+    "7": "7 days",
+    "14": "14 days",
+    "30": "30 days"
+  },
+  "passphraseLabel": "Passphrase",
+  "passphraseHint": "Protects your private key. Without it the reply is lost for good, there is no recovery. At least {min} characters, ideally a long sentence.",
+  "confirmLabel": "Repeat passphrase",
+  "submit": "Create request",
+  "submitting": "Generating key …",
+  "linkTitle": "Link for your customer",
+  "linkHint": "Send this link to your customer. It is shown only now. The part after the # makes sure the customer gets the right key; the server never sees it.",
+  "copy": "Copy",
+  "copied": "Copied",
+  "toList": "Go to my requests",
+  "errors": {
+    "question": "Please enter a question (at most 200 characters).",
+    "tooShort": "The passphrase is too short.",
+    "mismatch": "The passphrases do not match.",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "rateLimited": "Too many requests. Please try again later.",
+    "generic": "That didn't work. Please try again.",
+    "quota": "You have reached the limit of running requests (200). Delete old requests or wait until they expire."
+  }
+}

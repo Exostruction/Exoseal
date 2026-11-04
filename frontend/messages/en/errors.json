@@ -1,0 +1,10 @@
+{
+  "notFoundTitle": "This page has gone missing.",
+  "notFoundText": "Maybe it was moved, or the link is old. No drama, here are a few places to continue.",
+  "errorTitle": "Something went wrong.",
+  "errorText": "An error occurred. Your data was not shown or saved. Please try again.",
+  "retry": "Try again",
+  "home": "Go to start page",
+  "help": "Or go straight to:",
+  "quickLabel": "Quick links"
+}

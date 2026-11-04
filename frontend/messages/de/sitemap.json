@@ -1,0 +1,29 @@
+{
+  "metaTitle": "Seitenübersicht | ExoSeal",
+  "metaDescription": "Alle öffentlichen Seiten von ExoSeal auf einen Blick: Startseite, Anleitungen, häufige Fragen, Datenschutz und Impressum.",
+  "title": "Seitenübersicht",
+  "intro": "Alle Seiten von ExoSeal auf einen Blick.",
+  "groups": {
+    "product": "Produkt",
+    "app": "App",
+    "legal": "Rechtliches",
+    "guides": "Anleitungen"
+  },
+  "links": {
+    "start": "Startseite",
+    "how": "So funktioniert es",
+    "security": "Sicherheit",
+    "faq": "Häufige Fragen",
+    "login": "Anmelden",
+    "send": "Geheimnis senden",
+    "request": "Geheimnis anfragen",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "guides": "Anleitungen",
+    "compare": "Vergleich",
+    "openSource": "Open Source",
+    "changelog": "Änderungsprotokoll",
+    "terms": "Nutzungsbedingungen",
+    "blog": "Blog"
+  }
+}

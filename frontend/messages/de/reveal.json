@@ -1,0 +1,26 @@
+{
+  "title": "Jemand hat dir ein Geheimnis geschickt",
+  "warning": "Nach dem Anzeigen wird es sofort gelöscht. Dieser Link funktioniert danach nicht mehr.",
+  "show": "Geheimnis anzeigen",
+  "loading": "Wird geladen …",
+  "secretLabel": "Geheimnis",
+  "copy": "Kopieren",
+  "copied": "Kopiert",
+  "deleted": "Gelöscht. Der Link funktioniert nicht mehr.",
+  "passwordLabel": "Passwort",
+  "passwordHint": "Der Absender hat ein zusätzliches Passwort gesetzt.",
+  "passwordSubmit": "Entschlüsseln",
+  "errors": {
+    "gone": "Diesen Link gibt es nicht (mehr). Er wurde schon geöffnet, ist abgelaufen oder wurde gemeldet.",
+    "missingKey": "Der Link ist unvollständig (der Teil nach dem # fehlt). Bitte den ganzen Link verwenden.",
+    "wrongPassword": "Das Passwort stimmt nicht. Das Geheimnis ist noch nicht gelöscht, solange diese Seite offen bleibt.",
+    "corrupt": "Das Geheimnis lässt sich nicht entschlüsseln. Der Link ist vermutlich beschädigt.",
+    "rateLimited": "Zu viele Anfragen. Bitte später erneut versuchen.",
+    "generic": "Das hat nicht geklappt. Bitte erneut versuchen.",
+    "goneOpened": "Dieser Link wurde schon geöffnet. Falls du ihn nicht selbst geöffnet hast, kann jemand anderes das Geheimnis gesehen haben.",
+    "goneExpired": "Dieser Link ist abgelaufen und das Geheimnis wurde gelöscht. Bitte den Absender um einen neuen Link.",
+    "goneReported": "Dieser Link wurde gemeldet und das Geheimnis gelöscht. Bitte den Absender, falls nötig, um einen neuen Link.",
+    "goneRevoked": "Der Absender hat diesen Link zurückgezogen und das Geheimnis gelöscht. Bitte ihn um einen neuen Link."
+  },
+  "reportLink": "Diesen Link melden"
+}

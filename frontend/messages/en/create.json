@@ -1,0 +1,31 @@
+{
+  "title": "Send a secret",
+  "intro": "The text is encrypted in your browser. The server never sees it, and the link works exactly once.",
+  "textLabel": "Secret",
+  "textHint": "Maximum {max} characters/bytes.",
+  "expiryLabel": "Valid for",
+  "expiry": {
+    "1h": "1 hour",
+    "1d": "1 day",
+    "7d": "7 days"
+  },
+  "passwordLabel": "Additional password (optional)",
+  "passwordHint": "Give the recipient the password through a different channel.",
+  "submit": "Create link",
+  "submitting": "Encrypting …",
+  "linkTitle": "Your link",
+  "linkHint": "Send the link to the recipient. It works only once. The key is behind the #, which the server never sees.",
+  "copy": "Copy",
+  "copied": "Copied",
+  "another": "Another secret",
+  "errors": {
+    "empty": "Please enter some text.",
+    "tooLarge": "The text is too large.",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "rateLimited": "Too many requests. Please try again later.",
+    "generic": "That didn't work. Please try again.",
+    "quota": "You have reached the limit of active links (500). Withdraw old ones under “Sent” or wait until they expire."
+  },
+  "labelLabel": "Label (optional)",
+  "labelHint": "Only for your list under \"Sent\". It is not encrypted, so please do not enter anything secret."
+}

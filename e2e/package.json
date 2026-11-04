@@ -1,0 +1,8 @@
+{
+  "name": "exoseal-e2e",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": { "test": "node e2e.mjs" },
+  "dependencies": { "playwright-core": "^1.58.0" }
+}

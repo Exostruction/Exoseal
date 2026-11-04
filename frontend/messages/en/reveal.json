@@ -1,0 +1,26 @@
+{
+  "title": "Someone sent you a secret",
+  "warning": "It is deleted right after you view it. This link will not work again.",
+  "show": "Show secret",
+  "loading": "Loading …",
+  "secretLabel": "Secret",
+  "copy": "Copy",
+  "copied": "Copied",
+  "deleted": "Deleted. The link no longer works.",
+  "passwordLabel": "Password",
+  "passwordHint": "The sender set an additional password.",
+  "passwordSubmit": "Decrypt",
+  "errors": {
+    "gone": "This link does not exist (any more). It was already opened, has expired or was reported.",
+    "missingKey": "The link is incomplete (the part after the # is missing). Please use the whole link.",
+    "wrongPassword": "The password is wrong. The secret is not lost as long as this page stays open.",
+    "corrupt": "The secret cannot be decrypted. The link is probably damaged.",
+    "rateLimited": "Too many requests. Please try again later.",
+    "generic": "That didn't work. Please try again.",
+    "goneOpened": "This link was already opened. If you did not open it yourself, someone else may have seen the secret.",
+    "goneExpired": "This link has expired and the secret was deleted. Please ask the sender for a new link.",
+    "goneReported": "This link was reported and the secret was deleted. Please ask the sender for a new link if needed.",
+    "goneRevoked": "The sender withdrew this link and deleted the secret. Please ask them for a new link."
+  },
+  "reportLink": "Report this link"
+}

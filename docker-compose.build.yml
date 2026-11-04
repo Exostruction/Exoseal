@@ -1,0 +1,7 @@
+# Nur für die Entwicklung: Images aus dem Quellcode bauen statt fertige zu ziehen.
+#   docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build
+services:
+  frontend:
+    build: ./frontend
+  backend:
+    build: ./backend
